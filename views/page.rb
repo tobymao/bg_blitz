@@ -96,6 +96,10 @@ module Views
         icon 'bgg', 'www.boardgamegeek.com'
       end
     end
+    
+    def icon name, url
+      li(class: "icon #{name}") { a href: url }
+    end
 
     def render_nav
       style <<~CSS
@@ -136,10 +140,6 @@ module Views
     
     def nav_link name, url
       a name, href: url, class: 'nav_link'
-    end
-
-    def icon name, url
-      li(class: "icon #{name}") { a href: url }
     end
     
     def render_main
