@@ -24,19 +24,21 @@ module Views
           meta name: 'apple-mobile-web-app-capable', content: 'yes'
         end
 
-        div do
-          div style: CONTAINER_STYLE do
+        s = inline 'min-height' => '95%'
+
+        div style: s do
+          div class: 'bgb_container' do
             render_banner
           end
 
           render_nav
 
-          div style: CONTAINER_STYLE do
+          div class: 'bgb_container' do
             render_main
           end
-
-          render_footer
         end
+
+        render_footer
       end
     end
 
@@ -50,6 +52,12 @@ module Views
           font-family: 'Open Sans';
           width: 100%;
           text-align: center;
+        }
+
+        .bgb_container {
+          position: relative;
+          padding: 0 5% 0 5%;
+          max-width: #{MAX_W};
         }
       CSS
     end
@@ -68,7 +76,7 @@ module Views
     end
 
     def render_footer
-      s = inline'position' => 'absolute', 'bottom' => '0'
+      s = inline 'bottom' => '0'
 
       div style: s do
         text 'Site map, contact, copyright. etc'

@@ -4,13 +4,13 @@ module Views
   class Nav < Base
     needs :links
 
-    NAV_STYLE = inline 'background' => BGB_PURPLE
-
     def content
-      div style: NAV_STYLE do
+      s = inline 'background' => BGB_PURPLE
+
+      div style: s do
         render_style
 
-        div style: CONTAINER_STYLE do
+        div class: 'bgb_container' do
           links.each do |link|
             a link[0], href: link[1], class: 'nav_link'
           end

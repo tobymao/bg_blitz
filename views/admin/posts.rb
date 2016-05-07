@@ -13,6 +13,7 @@ module Views
       def render_main
         render_new
         render_all
+        render_js
       end
 
       def render_new
@@ -43,30 +44,13 @@ module Views
           input type: 'text', name: 'title', placeholder: 'Post Title', value: post&.title
           input type: 'hidden', name: 'text', id: 'text_field'
 
-          div(id: 'editor') { rawtext post&.text }
+          es = inline 'text-align' => 'left'
+
+          div id: 'editor', style: es do
+            rawtext post&.text
+          end
 
           input type: 'submit'
-
-          script <<~JS
-            var BGBPosts = {
-              editor: new Quill('#editor', {
-                modules: {
-                  'toolbar': '#toolbar',
-                  'link-tooltip': true,
-                  'image-tooltip': true,
-                },
-                styles: false,
-                theme: 'snow',
-              }),
-
-              onSubmit: function(event) {
-                event.preventDefault();
-                var textField = document.getElementById('text_field');
-                textField.value = this.editor.getHTML();
-                event.target.submit();
-              },
-            };
-          JS
         end
       end
 
@@ -95,6 +79,30 @@ module Views
             end
           end
         end
+      end
+
+
+      def render_js
+        script <<~JS
+          var BGBPosts = {
+            editor: new Quill('#editor', {
+              modules: {
+                'toolbar': '#toolbar',
+                'link-tooltip': true,
+                'image-tooltip': true,
+              },
+              styles: false,
+              theme: 'snow',
+            }),
+
+            onSubmit: function(event) {
+              event.preventDefault();
+              var textField = document.getElementById('text_field');
+              textField.value = this.editor.getHTML();
+              event.target.submit();
+            },
+          };
+        JS
       end
     end
   end

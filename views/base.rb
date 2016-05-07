@@ -17,11 +17,5 @@ module Views
     def inline hash
       self.class.inline hash
     end
-
-    CONTAINER_STYLE = inline(
-      'max-width' => MAX_W,
-      'position'  => 'relative',
-      'padding'   => '0 5% 0 5%',
-    )
   end
 end

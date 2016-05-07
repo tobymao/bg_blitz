@@ -7,6 +7,7 @@ end
 
 require 'roda'
 require 'fortitude'
+require 'sanitize'
 require 'rack/unreloader'
 
 def name_from_file(f)

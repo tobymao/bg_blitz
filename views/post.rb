@@ -13,7 +13,7 @@ module Views
 
       div style: s do
         div post.title
-        rawtext post.text
+        widget SafeHtml.new(raw: post.text)
         div post.pp_created_at
       end
     end

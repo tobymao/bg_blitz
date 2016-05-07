@@ -8,6 +8,7 @@ gem 'tilt'
 gem 'fortitude'
 gem 'rack-unreloader'
 gem 'rack_csrf'
+gem 'sanitize'
 
 group :development, :test do
   gem 'rspec'

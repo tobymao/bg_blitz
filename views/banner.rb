@@ -2,18 +2,19 @@ require_relative 'base'
 
 module Views
   class Banner < Base
+    Icon = Struct.new :klass, :url, :name, :hidden
+
     SPRITE_URL = '/images/icon_sprites.jpg'
 
-    ICONS_DATA = [
-      ['rss', 'www.boardgameblitz.com', 'RSS'],
-      ['facebook', 'https://www.facebook.com/BGBlitz', 'Facebook'],
-      ['twitter', 'https://twitter.com/bgameblitz', 'Twitter'],
-      ['youtube', 'https://www.youtube.com/channel/UC-zQPrSCinOtta_INepZo_A', 'YouTube'],
-      ['itunes', 'www.apple.com', 'iTunes'],
-      ['bgg', 'https://boardgamegeek.com/guild/2581', 'BGG Guild'],
+    ICONS = [
+      Icon.new('rss', 'www.boardgameblitz.com', 'RSS'),
+      Icon.new('facebook', 'https://www.facebook.com/BGBlitz', 'Facebook'),
+      Icon.new('twitter', 'https://twitter.com/bgameblitz', 'Twitter'),
+      Icon.new('google', 'https://google.com', 'Google', true),
+      Icon.new('youtube', 'https://www.youtube.com/channel/UC-zQPrSCinOtta_INepZo_A', 'YouTube'),
+      Icon.new('itunes', 'www.apple.com', 'iTunes'),
+      Icon.new('bgg', 'https://boardgamegeek.com/guild/2581', 'BGG Guild'),
     ]
-
-    ICONS = ICONS_DATA.map(&:first)
 
     def content
       div style: 'position:relative' do
@@ -24,9 +25,10 @@ module Views
         end
 
         ul class: 'icons' do
-          ICONS_DATA.each do |data|
-            li class: "icon #{data[0]}" do
-              a href: data[1], tooltip: data[2]
+          ICONS.each do |data|
+            next if data.hidden
+            li class: "icon #{data.klass}" do
+              a href: data.url, tooltip: data.name
             end
           end
         end
@@ -104,14 +106,13 @@ module Views
       CSS
     end
 
-    private
     def icons_css icons, x, y, step
       value = 0
 
-      icons.each_with_object(String.new) do |name, css|
+      icons.each_with_object(String.new) do |icon, css|
         css << <<~CSS
-          .icon.#{name} { background: url(#{SPRITE_URL}) #{value}px #{x}px; }
-          .icon.#{name} a:hover { background: url(#{SPRITE_URL}) #{value}px #{y}px; }
+          .icon.#{icon.klass} { background: url(#{SPRITE_URL}) #{value}px #{x}px; }
+          .icon.#{icon.klass} a:hover { background: url(#{SPRITE_URL}) #{value}px #{y}px; }
         CSS
 
         value -= step
