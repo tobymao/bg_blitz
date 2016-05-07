@@ -5,8 +5,13 @@ module Views
     needs :posts
 
     def render_main
-      posts.each do |p|
-        widget Views::Post.new(post: p)
+      s = inline 'text-align' => 'center'
+
+      div style: s do
+        posts.each do |p|
+          widget Views::Post.new(post: p)
+          br
+        end
       end
     end
   end

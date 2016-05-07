@@ -35,14 +35,21 @@ class App < Roda
     end
 
     r.on 'admin' do
-      r.on 'posts' do
+      r.on ['posts/:id', 'posts'] do |id|
+        post = Post[id] if id.to_i > 0
+
         r.get do
-          post = Post[request['id']]
           widget Views::Admin::Posts, post: post, posts: paginated_posts
         end
 
-        r.post do
-          Post.create title: request['title'], text: request['text']
+        r.is method: 'post' do
+          params = { title: r['title'], text: r['text'] }
+          post ? post.update(params) : Post.create(params)
+          r.redirect "/admin/posts/#{id}"
+        end
+
+        r.is 'delete', method: 'post' do
+          post.delete
           r.redirect '/admin/posts'
         end
       end

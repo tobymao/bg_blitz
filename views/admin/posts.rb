@@ -4,15 +4,15 @@ module Views
       needs :post
       needs :posts
 
-      def render_main
-        render_new
-        render_all
-      end
-
       def render_head
         super
         link rel: 'stylesheet', type: 'text/css', href: '/vendor/quill.snow.css'
         script src: '/vendor/quill.min.js'
+      end
+
+      def render_main
+        render_new
+        render_all
       end
 
       def render_new
@@ -42,13 +42,12 @@ module Views
 
           input type: 'text', name: 'title', placeholder: 'Post Title', value: post&.title
           input type: 'hidden', name: 'text', id: 'text_field'
-          input type: 'hidden', name: 'id', value: post&.id
 
           div(id: 'editor') { rawtext post&.text }
 
           input type: 'submit'
 
-          script <<-JS
+          script <<~JS
             var BGBPosts = {
               editor: new Quill('#editor', {
                 modules: {
@@ -71,18 +70,28 @@ module Views
         end
       end
 
-      PP_STYLE = inline 'margin' => '0 5px 0 5px'
 
       def render_all
+        ps = inline 'margin' => '0 5px 0 5px'
+        fs = inline 'display' => 'inline-block', 'margin-left' => '5px'
+        submit_js =  "return confirm('Delete this post?')"
+
         div 'Previous Posts'
 
         ul do
           posts.each do |p|
             li do
-              span p.id, style: PP_STYLE
-              span p.title, style: PP_STYLE
-              span p.created_at, style: PP_STYLE
-              a 'edit', href: "/admin/posts?id=#{p.id}", style: PP_STYLE
+              span p.id, style: ps
+              span p.title, style: ps
+              span p.pp_created_at, style: ps
+
+              url = "/admin/posts/#{p.id}"
+              a 'edit', href: url, style: ps
+
+              form action: "#{url}/delete", method: 'post', onsubmit: submit_js, style: fs do
+                rawtext csrf_tag
+                input type: 'submit', value: 'delete'
+              end
             end
           end
         end
