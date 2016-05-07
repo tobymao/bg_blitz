@@ -5,7 +5,7 @@ module Views
     needs :raw
 
     def content
-        rawtext Sanitize.fragment(raw, Sanitize::Config::RELAXED)
+      rawtext Sanitize.fragment(raw, Sanitize::Config::RELAXED)
     end
   end
 end
