@@ -10,6 +10,14 @@ module Views
 
     doctype :html5
 
+    def self.csrf_tag= tag
+      @@csrf_tag = tag
+    end
+
+    def csrf_tag
+      rawtext @@csrf_tag
+    end
+
     def self.inline hash
       hash.map { |k, v| "#{k}:#{v}" }.join(';').freeze
     end

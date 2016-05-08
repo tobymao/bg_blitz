@@ -2,9 +2,8 @@
 
 migrate = lambda do |env, version|
   ENV['RACK_ENV'] = env
-  require_relative 'db'
+  require_relative 'models'
   require 'logger'
-  Sequel.extension :migration
   DB.loggers << Logger.new($stdout)
   Sequel::Migrator.apply(DB, 'migrate', version)
 end

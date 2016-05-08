@@ -2,14 +2,12 @@ require_relative 'base'
 
 module Views
   class Page < Base
-    needs :csrf_tag
-
     DEFAULT_LINKS = [
       ['Home', '/'],
       ['Podcasts', '/podcasts'],
       ['Videos', '/videos'],
+      ['Blog', '/blog'],
       ['About Us', '/about'],
-      ['Sponsors', '/sponsors'],
       ['Contact', '/contact'],
     ].freeze
 
@@ -76,10 +74,27 @@ module Views
     end
 
     def render_footer
-      s = inline 'bottom' => '0'
+      s = inline(
+        'bottom' => '0',
+        'color' => BGB_PURPLE,
+        'font-size' => '80%',
+      )
 
       div style: s do
-        text 'Site map, contact, copyright. etc'
+        rawtext '&copy; Board Game Blitz 2016.'
+
+        ls = inline(
+          'margin' => '0.5em',
+          'text-decoration' => 'none',
+          'color' => BGB_PURPLE,
+        )
+
+        div do
+          a 'About', href: '/about', style: ls
+          a 'Contact', href: '/contact', style: ls
+          a 'Podcasts', href: '/podcasts', style: ls
+          a 'Videos', href: '/videos', style: ls
+        end
       end
     end
   end

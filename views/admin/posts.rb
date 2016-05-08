@@ -4,6 +4,8 @@ module Views
       needs :post
       needs :posts
 
+      PATH = '/admin/posts'
+
       def render_head
         super
         link rel: 'stylesheet', type: 'text/css', href: '/vendor/quill.snow.css'
@@ -11,17 +13,18 @@ module Views
       end
 
       def render_main
+        h1 'Posts'
         render_new
-        render_all
+        widget ItemList.new items: posts, path: PATH
         render_js
       end
 
       def render_new
-        url = String.new('/admin/posts')
+        url = String.new PATH
         url << "/#{post.id}" if post
 
-        form action: url, method: 'post', onsubmit: 'BGBPosts.onSubmit(event)' do
-          rawtext csrf_tag
+        form id: 'form', action: url, method: 'post', onsubmit: 'BGBPosts.onSubmit(event)' do
+          csrf_tag
 
           div id: 'toolbar' do
             select title: 'Text Alignment', class: 'ql-align' do
@@ -42,6 +45,15 @@ module Views
           end
 
           input type: 'text', name: 'title', placeholder: 'Post Title', value: post&.title
+
+          select title: 'type', name: 'post_type', form: 'form' do
+            ::Post.post_types.each do |type|
+              option value: type, selected: post&.post_type == type do
+                text type
+              end
+            end
+          end
+
           input type: 'hidden', name: 'text', id: 'text_field'
 
           es = inline 'text-align' => 'left'
@@ -50,37 +62,10 @@ module Views
             rawtext post&.text
           end
 
-          input type: 'submit'
+          submit_text = post ? 'Update Post' : 'New Post'
+          input type: 'submit', value: submit_text
         end
       end
-
-
-      def render_all
-        ps = inline 'margin' => '0 5px 0 5px'
-        fs = inline 'display' => 'inline-block', 'margin-left' => '5px'
-        submit_js =  "return confirm('Delete this post?')"
-
-        div 'Previous Posts'
-
-        ul do
-          posts.each do |p|
-            li do
-              span p.id, style: ps
-              span p.title, style: ps
-              span p.pp_created_at, style: ps
-
-              url = "/admin/posts/#{p.id}"
-              a 'edit', href: url, style: ps
-
-              form action: "#{url}/delete", method: 'post', onsubmit: submit_js, style: fs do
-                rawtext csrf_tag
-                input type: 'submit', value: 'delete'
-              end
-            end
-          end
-        end
-      end
-
 
       def render_js
         script <<~JS
@@ -102,8 +87,11 @@ module Views
               event.target.submit();
             },
           };
+
+          console.log(BGBPosts.editor.getHTML());
         JS
       end
+
     end
   end
 end

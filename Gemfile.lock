@@ -7,10 +7,16 @@ GEM
       minitest (~> 5.1)
       thread_safe (~> 0.3, >= 0.3.4)
       tzinfo (~> 1.1)
-    crass (1.0.2)
+    better_errors (2.1.1)
+      coderay (>= 1.0.0)
+      erubis (>= 2.6.6)
+      rack (>= 0.9.0)
+    coderay (1.1.1)
     daemons (1.2.3)
     diff-lcs (1.2.5)
     docile (1.1.5)
+    down (2.1.0)
+    erubis (2.7.0)
     eventmachine (1.2.0.1)
     factory_girl (4.7.0)
       activesupport (>= 3.0.0)
@@ -19,12 +25,7 @@ GEM
       ref (>= 1.0.5)
     i18n (0.7.0)
     json (1.8.3)
-    mini_portile2 (2.0.0)
     minitest (5.8.4)
-    nokogiri (1.6.7.2)
-      mini_portile2 (~> 2.0.0.rc2)
-    nokogumbo (1.4.7)
-      nokogiri
     pg (0.18.4)
     rack (1.6.4)
     rack-unreloader (1.5.0)
@@ -46,14 +47,12 @@ GEM
       diff-lcs (>= 1.2.0, < 2.0)
       rspec-support (~> 3.4.0)
     rspec-support (3.4.1)
-    sanitize (4.0.1)
-      crass (~> 1.0.2)
-      nokogiri (>= 1.4.4)
-      nokogumbo (~> 1.4.1)
     sequel (4.33.0)
     sequel_pg (1.6.16)
       pg (>= 0.8.0)
       sequel (>= 4.0.0)
+    shrine (1.4.2)
+      down (>= 2.0.1)
     simplecov (0.11.2)
       docile (~> 1.1.0)
       json (~> 1.8)
@@ -72,15 +71,16 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
+  better_errors
   factory_girl
   fortitude
   rack-unreloader
   rack_csrf
   roda
   rspec
-  sanitize
   sequel
   sequel_pg
+  shrine
   simplecov
   thin
   tilt

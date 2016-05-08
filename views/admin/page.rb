@@ -5,8 +5,7 @@ module Views
     class Page < Views::Page
       ADMIN_LINKS = [
         ['Posts', '/admin/posts'],
-        ['Videos', '/admin/videos'],
-        ['Podcasts', '/admin/podcasts'],
+        ['Items', '/admin/items'],
       ].freeze
 
       def render_head
