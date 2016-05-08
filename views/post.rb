@@ -25,13 +25,15 @@ module Views
     end
 
     def render_item item
-      case item.item_type
+      case item&.type
       when 'audio'
         Audio.new(file: item.file).to_html
       when 'image'
         Base.inline_html { img src: item.file_url }
       when 'youtube'
         Base.inline_html { text item.file_url }
+      else
+        ''
       end
     end
   end

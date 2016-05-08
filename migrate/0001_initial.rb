@@ -6,7 +6,7 @@ Sequel.migration do
       primary_key :id
       String :title, null: false
       String :text, null: false
-      post_type :post_type, null: false, index: true
+      post_type :type, null: false, index: true
       DateTime :created_at, null: false
       DateTime :updated_at, null: false
     end
@@ -19,7 +19,7 @@ Sequel.migration do
       String :description, null: false
       String :file_data
       String :external_url
-      item_type :item_type, null: false, index: true
+      item_type :type, null: false, index: true
       DateTime :created_at, null: false
       DateTime :updated_at, null: false
     end

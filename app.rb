@@ -39,7 +39,7 @@ class App < Roda
 
   def posts_by_type type = nil
     posts = paginate Post, false
-    posts = posts.where post_type: type if type
+    posts = posts.where type: type if type
     posts = posts.all
 
     item_ids = posts.flat_map &:item_ids
@@ -109,7 +109,7 @@ class App < Roda
         end
 
         r.is method: 'post' do
-          params = { title: r['title'], text: r['text'], post_type: r['post_type'] }
+          params = { title: r['title'], text: r['text'], type: r['type'] }
 
           post =
             if post

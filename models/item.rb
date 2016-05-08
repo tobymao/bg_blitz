@@ -3,8 +3,8 @@ require_relative '../uploaders/item_uploader.rb'
 class Item < Base
   include ItemUpdloader[:file]
 
-  def self.item_types
-    db_schema[:item_type][:enum_values]
+  def self.types
+    db_schema[:type][:enum_values]
   end
 
   def before_validation
@@ -12,11 +12,11 @@ class Item < Base
 
     case file&.mime_type&.split('/')&.first
     when 'image'
-      self.item_type = 'image'
+      self.type = 'image'
     when 'audio'
-      self.item_type = 'audio'
+      self.type = 'audio'
     else
-      self.item_type = 'youtube' if external_url&.include? 'youtube'
+      self.type = 'youtube' if external_url&.include? 'youtube'
     end
   end
 

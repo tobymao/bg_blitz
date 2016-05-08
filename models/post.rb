@@ -1,8 +1,8 @@
 class Post < Base
   ITEM_REGEX = /{{(.*?)}}/
 
-  def self.post_types
-    db_schema[:post_type][:enum_values]
+  def self.types
+    db_schema[:type][:enum_values]
   end
 
   def item_ids

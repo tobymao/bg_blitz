@@ -46,9 +46,9 @@ module Views
 
           input type: 'text', name: 'title', placeholder: 'Post Title', value: post&.title
 
-          select title: 'type', name: 'post_type', form: 'form' do
-            ::Post.post_types.each do |type|
-              option value: type, selected: post&.post_type == type do
+          select title: 'type', name: 'type', form: 'form' do
+            ::Post.types.each do |type|
+              option value: type, selected: post&.type == type do
                 text type
               end
             end
