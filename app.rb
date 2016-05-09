@@ -1,4 +1,4 @@
-DEV = ENV['RACK_ENV'] == 'development'
+PRODUCTION = ENV['RACK_ENV'] == 'production'
 
 require 'roda'
 require 'fortitude'
@@ -9,7 +9,7 @@ Shrine.plugin :sequel
 Shrine.plugin :rack_file
 Shrine.plugin :validation_helpers
 
-if DEV
+unless PRODUCTION
   require 'better_errors'
   require "shrine/storage/file_system"
 
@@ -26,7 +26,7 @@ FOLDERS.each do |folder|
 end
 
 class App < Roda
-  if DEV
+  unless PRODUCTION
     opts[:root] = Dir.pwd
     plugin :static, %w[/html /vendor /images /uploads]
     use BetterErrors::Middleware

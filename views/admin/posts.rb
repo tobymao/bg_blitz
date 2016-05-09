@@ -1,3 +1,5 @@
+require './views/admin/page'
+
 module Views
   module Admin
     class Posts < Admin::Page

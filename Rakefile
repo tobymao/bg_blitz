@@ -67,16 +67,3 @@ desc "Open irb shell in production mode"
 task :prod_irb do
   irb.call('production')
 end
-
-# Specs
-spec = proc do |pattern|
-  sh "#{FileUtils::RUBY} -e 'ARGV.each{|f| require f}' #{pattern}"
-end
-
-desc "Run all specs"
-task :default => [:model_spec, :web_spec]
-
-desc "Run model specs"
-task :model_spec do
-  spec.call('./spec/model/*_spec.rb')
-end

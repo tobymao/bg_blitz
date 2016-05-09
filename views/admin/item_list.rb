@@ -1,8 +1,8 @@
-require_relative '../base'
+require './views/base'
 
 module Views
   module Admin
-    class ItemList < Base
+    class ItemList < Views::Base
       needs :items
       needs :path
 

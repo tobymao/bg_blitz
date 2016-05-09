@@ -1,8 +1,8 @@
 require './spec/spec_helper'
 
-describe Views::Page do
+describe Views::Banner do
   it 'should render' do
-    view = Views::Page.new
+    view = Views::Banner.new
     expect(view.to_html).not_to be_nil
   end
 end

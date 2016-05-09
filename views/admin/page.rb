@@ -1,4 +1,4 @@
-require_relative '../page'
+require './views/page'
 
 module Views
   module Admin
