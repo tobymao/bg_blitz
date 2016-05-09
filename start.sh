@@ -1,1 +1,1 @@
-bundle exec thin start
+rerun bundle exec thin start

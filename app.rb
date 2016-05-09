@@ -1,5 +1,37 @@
+DEV = ENV['RACK_ENV'] == 'development'
+
+require 'roda'
+require 'fortitude'
+require 'shrine'
+require './models.rb'
+
+Shrine.plugin :sequel
+Shrine.plugin :rack_file
+Shrine.plugin :validation_helpers
+
+if DEV
+  require 'better_errors'
+  require "shrine/storage/file_system"
+
+  Shrine.storages = {
+    cache: Shrine::Storage::FileSystem.new('public', prefix: 'uploads/cache'),
+    store: Shrine::Storage::FileSystem.new('public', prefix: 'uploads/store'),
+  }
+end
+
+FOLDERS = %w[views models uploaders]
+
+FOLDERS.each do |folder|
+  Dir["./#{folder}/**/*.rb" ].each { |file| require file }
+end
+
 class App < Roda
-  dev = ENV['RACK_ENV'] == 'development'
+  if DEV
+    opts[:root] = Dir.pwd
+    plugin :static, %w[/html /vendor /images /uploads]
+    use BetterErrors::Middleware
+    BetterErrors.application_root = __dir__
+  end
 
   use Rack::Session::Cookie, key: '_App_session', secret: File.read('.session_secret')
 
@@ -20,11 +52,6 @@ class App < Roda
 
   status_handler 404 do
     "Where did it go?"
-  end
-
-  if dev
-    opts[:root] = Dir.pwd
-    plugin :static, %w[/html /vendor /images /uploads]
   end
 
   def widget klass, needs

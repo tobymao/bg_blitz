@@ -1,4 +1,6 @@
 require 'simplecov'
+require './app'
+
 SimpleCov.start
 
 RSpec.configure do |config|
