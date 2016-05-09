@@ -1,1 +1,1 @@
-rerun bundle exec thin start --ignore 'coverage/*'
+rerun bundle exec thin start --signal KILL --ignore 'coverage/*'

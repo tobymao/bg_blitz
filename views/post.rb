@@ -7,9 +7,10 @@ module Views
 
     def content
       s = inline(
-        'display'    => 'inline-block',
         'text-align' => 'left',
-        'max-width'  => '620px',
+        'margin' => '1em 0 1em 0',
+        'border-bottom' => '1px solid gray',
+        'padding-bottom' => '2em',
       )
 
       rendered_text = post.map_text do |id|
@@ -18,8 +19,8 @@ module Views
       end
 
       div style: s do
-        div post.title
-        div post.pp_created_at
+        h1 post.title
+        h2 post.pp_created_at
         rawtext rendered_text
       end
     end

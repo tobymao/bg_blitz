@@ -52,6 +52,9 @@ module Views
           text-align: center;
         }
 
+        h1 { font-size: 2em }
+        h2 { font-weight: bold }
+
         .bgb_container {
           position: relative;
           padding: 0 5% 0 5%;
