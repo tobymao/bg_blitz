@@ -73,6 +73,14 @@ class BGBlitz < Roda
       posts_by_type 'blog'
     end
 
+    r.is 'about' do
+      widget Views::About
+    end
+
+    r.is 'contact' do
+      widget Views::Contact
+    end
+
     r.on 'admin' do
       r.on ['items/:id', 'items'] do |id|
         item = Item[id] if id.to_i > 0
@@ -85,9 +93,8 @@ class BGBlitz < Roda
         r.is method: 'post' do
           params = {
             title: r['title'],
-            description: r['description'],
-            file: r['file'] ,
-            external_url: r['external_url'] ,
+            file: r['file'],
+            external_url: r['external_url'],
           }
 
           item =
@@ -135,7 +142,7 @@ class BGBlitz < Roda
     end
   end
 
-  def widget klass, needs
+  def widget klass, needs = {}
     klass.new(**needs).to_html
   end
 

@@ -5,14 +5,14 @@ module Views
     needs :links
 
     def content
-      s = inline 'background' => BGB_PURPLE
-
-      div style: s do
+      div style: inline('background' => BGB_PURPLE) do
         render_style
 
         div class: 'bgb_container' do
-          links.each do |link|
-            a link[0], href: link[1], class: 'nav_link'
+          div style: inline('text-align' => 'center') do
+            links.each do |link|
+              a link[0], href: link[1], class: 'nav_link'
+            end
           end
         end
       end
@@ -28,7 +28,6 @@ module Views
         .nav_link {
           display: inline-block;
           line-height: 2em;
-          text-align: center;
           margin: 0;
           color: white;
           text-decoration: none;

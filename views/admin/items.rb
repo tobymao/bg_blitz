@@ -23,9 +23,7 @@ module Views
           csrf_tag
           input type: 'text', name: 'title', placeholder: 'Title', value: item&.title
           br
-          input type: 'text', name: 'description', placeholder: 'Description', value: item&.description
-          br
-          text item.file.original_filename if item
+          text item.file.original_filename if item&.file
           br
           input type: 'file', name: 'file'
           br

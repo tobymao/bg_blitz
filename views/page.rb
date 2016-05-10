@@ -49,7 +49,6 @@ module Views
         body {
           font-family: 'Open Sans';
           width: 100%;
-          text-align: center;
         }
 
         h1 { font-size: 2em }
@@ -58,7 +57,35 @@ module Views
         .bgb_container {
           position: relative;
           padding: 0 5% 0 5%;
+          margin: 0 auto;
+          text-align: justify;
           max-width: #{MAX_W};
+        }
+
+        .icon {
+          display: inline-block;
+          width: 30px;
+          margin: 8px 1px 0px 1px;
+        }
+
+        .icon a {
+          height: 34px;
+          display: block;
+        }
+
+        .icon a:hover {
+          position: relative;
+        }
+
+        .icon a[tooltip]:hover:after {
+          content: attr(tooltip);
+          position: absolute;
+          left: 0;
+          top: 100%;
+          font-size: 75%;
+          padding: .5em .5em;
+          background-color: white;
+          color: #{Base::BGB_PURPLE};
         }
       CSS
     end
@@ -81,6 +108,7 @@ module Views
         'bottom' => '0',
         'color' => BGB_PURPLE,
         'font-size' => '80%',
+        'text-align' => 'center',
       )
 
       div style: s do

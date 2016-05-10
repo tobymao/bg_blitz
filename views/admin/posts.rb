@@ -64,7 +64,7 @@ module Views
             rawtext post&.text
           end
 
-          submit_text = post ? 'Update Post' : 'New Post'
+          submit_text = post ? 'Update Post' : 'Create Post'
           input type: 'submit', value: submit_text
         end
       end

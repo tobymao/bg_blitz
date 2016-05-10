@@ -16,7 +16,6 @@ Sequel.migration do
     create_table :items do
       primary_key :id
       String :title, null: false
-      String :description, null: false
       String :file_data
       String :external_url
       item_type :type, null: false, index: true

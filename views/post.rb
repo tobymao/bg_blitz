@@ -32,7 +32,7 @@ module Views
       when 'image'
         Base.inline_html { img src: item.file_url }
       when 'youtube'
-        Base.inline_html { text item.file_url }
+        Youtube.new(url: item.external_url).to_html
       else
         ''
       end
