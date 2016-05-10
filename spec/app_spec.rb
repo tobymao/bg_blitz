@@ -1,7 +1,7 @@
 require './spec/spec_helper'
 
-describe App do
-  let(:app) { App.freeze.app }
+describe BGBlitz do
+  let(:app) { BGBlitz.freeze.app }
 
   describe 'get requests' do
     %w[/ /podcasts /videos /blog].each do |path|

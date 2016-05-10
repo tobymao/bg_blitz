@@ -1,3 +1,3 @@
-require_relative 'app'
+require_relative 'bg_blitz'
 
-run App.freeze.app
+run BGBlitz.freeze.app

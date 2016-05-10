@@ -2,7 +2,7 @@ require 'simplecov'
 SimpleCov.start  do
   add_filter "/spec/"
 end
-require './app'
+require './bg_blitz'
 require 'rack/test'
 
 RSpec.configure do |config|
