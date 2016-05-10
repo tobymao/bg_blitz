@@ -8,10 +8,11 @@ module Views
         Icons::Icon.new('bgg', 'https://boardgamegeek.com/user/ambierona', 'BGG'),
         Icons::Icon.new('youtube', 'https://www.youtube.com/channel/UCvt8rhQ0E0MThxaFLCbGoWw', 'Youtube'),
       ]
+      s = inline 'line-height' => '1.3em'
 
       render_box 'Ambie', BGB_BLUE, ambie_icons, 137, 103
 
-      div do
+      div style: s do
         text "Ambie has been playing games for as long as she can remember. When she was a kid, she played board, card, and video games "\
           "with her family (classics like Monopoly, Risk, Clue, Stratego, Rummikub, Gin, Euchre...). She also used to play D&D "\
           "with her family on camping trips. In college, she started playing 'modern' board games with friends, starting with Dominion "\
@@ -29,7 +30,7 @@ module Views
 
       render_box 'Cassadi', BGB_PURPLE, cassadi_icons, 69, 35
 
-      div do
+      div style: s do
         text "Cassadi has been playing games for as long as she can remember. When she was a kid, she played board, card, and video games "\
           "with her family (classics like Monopoly, Risk, Clue, Stratego, Rummikub, Gin, Euchre...). She also used to play D&D "\
           "with her family on camping trips. In college, she started playing 'modern' board games with friends, starting with Dominion "\
@@ -47,7 +48,7 @@ module Views
 
       render_box 'Crystal', BGB_PINK, crystal_icons, 205, 171
 
-      div do
+      div style: s do
         text "Crystal has been playing games for as long as she can remember. When she was a kid, she played board, card, and video games "\
           "with her family (classics like Monopoly, Risk, Clue, Stratego, Rummikub, Gin, Euchre...). She also used to play D&D "\
           "with her family on camping trips. In college, she started playing 'modern' board games with friends, starting with Dominion "\
@@ -73,9 +74,7 @@ module Views
         'padding' => '.2em 0 .2em 0',
       )
 
-      style <<~CSS
-        #{Icons.icons_css name, Icons::ICONS, x, y, 30}
-      CSS
+      style Icons.icons_css(name, Icons::ICONS, x, y, 30)
 
       div style: box_style do
         text name

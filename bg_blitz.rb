@@ -56,6 +56,8 @@ class BGBlitz < Roda
 
   route do |r|
     Views::Base.csrf_tag = csrf_tag
+    Views::Base.current_path = r.path
+    Views::Base.params = r.params
 
     r.root do
       posts_by_type
@@ -148,7 +150,7 @@ class BGBlitz < Roda
 
   def paginate klass, force = true
     page = request['page'] || 1
-    dataset = klass.reverse_order(:id).paginate(page, 10, 0)
+    dataset = klass.reverse_order(:id).paginate(page.to_i, 10, 0)
     force ? dataset.all : dataset
   end
 

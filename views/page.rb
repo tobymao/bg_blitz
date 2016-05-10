@@ -51,8 +51,17 @@ module Views
           width: 100%;
         }
 
-        h1 { font-size: 2em }
-        h2 { font-weight: bold }
+        h1 {
+          font-size: 2em;
+          margin-bottom: 0.3em;
+          line-height: 1em;
+        }
+
+        h2 {
+          font-weight: bold ;
+          font-size: 0.8em;
+          margin-bottom: 1em;
+        }
 
         .bgb_container {
           position: relative;
@@ -86,6 +95,7 @@ module Views
           padding: .5em .5em;
           background-color: white;
           color: #{Base::BGB_PURPLE};
+          z-index: 999;
         }
       CSS
     end

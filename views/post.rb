@@ -10,7 +10,8 @@ module Views
         'text-align' => 'left',
         'margin' => '1em 0 1em 0',
         'border-bottom' => '1px solid gray',
-        'padding-bottom' => '2em',
+        'padding-bottom' => '1.5em',
+        'line-height' => '1.3em',
       )
 
       rendered_text = post.map_text do |id|
@@ -18,7 +19,7 @@ module Views
         render_item item_hash[id.to_i]
       end
 
-      div style: s do
+      div class: 'post', style: s do
         h1 post.title
         h2 post.pp_created_at
         rawtext rendered_text

@@ -3,6 +3,7 @@ module Views
     BGB_BLUE   = '#11a3d3'
     BGB_PINK   = '#ea64fa'
     BGB_PURPLE = '#9664fa'
+    BGB_GRAY   = '#0f0f0f'
 
     TABLET_W = '1000px'
     MOBILE_W = '600px'
@@ -16,6 +17,22 @@ module Views
 
     def csrf_tag
       rawtext @@csrf_tag
+    end
+
+    def self.current_path= path
+      @@current_path= path
+    end
+
+    def current_path
+      @@current_path
+    end
+
+    def self.params= params
+      @@params= params
+    end
+
+    def params
+      @@params
     end
 
     def self.inline hash
