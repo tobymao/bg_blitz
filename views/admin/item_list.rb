@@ -7,22 +7,22 @@ module Views
       needs :path
 
       def content
-        is = inline 'margin' => '0 5px 0 5px'
-        fs = inline 'display' => 'inline-block', 'margin-left' => '5px'
+        item_style = inline 'margin' => '0 5px 0 5px'
+        form_style = inline 'display' => 'inline-block', 'margin-left' => '5px'
 
         h1 'Previous'
 
         ul do
           items.each do |item|
             li do
-              span item.id, style: is
-              span item.title, style: is
-              span item.pp_created_at, style: is
+              span item.id, style: item_style
+              span item.title, style: item_style
+              span item.pp_created_at, style: item_style
 
               url = "#{path}/#{item.id}"
-              a 'edit', href: url, style: is
+              a 'edit', href: url, style: item_style
 
-              form action: "#{url}/delete", method: 'post', onsubmit: submit_js, style: fs do
+              form action: "#{url}/delete", method: 'post', onsubmit: submit_js, style: form_style do
                 csrf_tag
                 input type: 'submit', value: 'delete'
               end

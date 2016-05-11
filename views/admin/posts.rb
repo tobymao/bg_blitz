@@ -58,9 +58,9 @@ module Views
 
           input type: 'hidden', name: 'text', id: 'text_field'
 
-          es = inline 'text-align' => 'left'
+          editor_style = inline 'text-align' => 'left'
 
-          div id: 'editor', style: es do
+          div id: 'editor', style: editor_style do
             rawtext post&.text
           end
 
@@ -92,6 +92,11 @@ module Views
 
           console.log(BGBPosts.editor.getHTML());
         JS
+      end
+
+      def render_footer
+        widget Pager
+        super
       end
 
     end

@@ -8,11 +8,12 @@ module Views
         Icons::Icon.new('bgg', 'https://boardgamegeek.com/user/ambierona', 'BGG'),
         Icons::Icon.new('youtube', 'https://www.youtube.com/channel/UCvt8rhQ0E0MThxaFLCbGoWw', 'Youtube'),
       ]
-      s = inline 'line-height' => '1.3em'
+
+      text_style = inline 'line-height' => '1.3em'
 
       render_box 'Ambie', BGB_BLUE, ambie_icons, 137, 103
 
-      div style: s do
+      div style: text_style do
         text "Ambie has been playing games for as long as she can remember. When she was a kid, she played board, card, and video games "\
           "with her family (classics like Monopoly, Risk, Clue, Stratego, Rummikub, Gin, Euchre...). She also used to play D&D "\
           "with her family on camping trips. In college, she started playing 'modern' board games with friends, starting with Dominion "\
@@ -28,9 +29,9 @@ module Views
         Icons::Icon.new('youtube', 'https://www.facebook.com/ambie', 'Youtube'),
       ]
 
-      render_box 'Cassadi', BGB_PURPLE, cassadi_icons, 69, 35
+      render_box 'Cassadi', BGB_PINK, cassadi_icons, 205, 171
 
-      div style: s do
+      div style: text_style do
         text "Cassadi has been playing games for as long as she can remember. When she was a kid, she played board, card, and video games "\
           "with her family (classics like Monopoly, Risk, Clue, Stratego, Rummikub, Gin, Euchre...). She also used to play D&D "\
           "with her family on camping trips. In college, she started playing 'modern' board games with friends, starting with Dominion "\
@@ -46,9 +47,9 @@ module Views
         Icons::Icon.new('youtube', 'https://www.facebook.com/ambie', 'Youtube'),
       ]
 
-      render_box 'Crystal', BGB_PINK, crystal_icons, 205, 171
+      render_box 'Crystal', BGB_PURPLE, crystal_icons, 69, 35
 
-      div style: s do
+      div style: text_style do
         text "Crystal has been playing games for as long as she can remember. When she was a kid, she played board, card, and video games "\
           "with her family (classics like Monopoly, Risk, Clue, Stratego, Rummikub, Gin, Euchre...). She also used to play D&D "\
           "with her family on camping trips. In college, she started playing 'modern' board games with friends, starting with Dominion "\

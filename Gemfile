@@ -7,6 +7,7 @@ gem 'sequel_pg'
 gem 'fortitude'
 gem 'rack_csrf'
 gem 'shrine'
+gem 'roda-basic-auth'
 
 group :development, :test do
   gem 'rspec'

@@ -6,11 +6,13 @@ class Post < Base
   end
 
   def item_ids
-    item_ids = text.scan(ITEM_REGEX).flatten.uniq
+    text.scan(ITEM_REGEX).flatten.uniq.map(&:to_i)
   end
 
   def map_text
-    text.gsub(ITEM_REGEX) { |match| yield match }
+    text.gsub ITEM_REGEX do |match|
+      yield match.gsub(/[^0-9]/,'').to_i
+    end
   end
 
   def validate

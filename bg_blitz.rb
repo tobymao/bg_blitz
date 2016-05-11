@@ -43,7 +43,7 @@ class BGBlitz < Roda
   }
 
   plugin :csrf
-
+  plugin :basic_auth
   plugin :status_handler
 
   status_handler 403 do
@@ -83,7 +83,17 @@ class BGBlitz < Roda
       widget Views::Contact
     end
 
+    r.is 'rss.xml' do
+      response.headers['content-type'] = 'xml'
+      data = posts_and_items 'podcast'
+      Views::PodcastRSS.rss data
+    end
+
     r.on 'admin' do
+      r.basic_auth do |user, pass|
+        [user, pass] == [ENV['AUTH_USER'], ENV['AUTH_PASS']]
+      end
+
       r.on ['items/:id', 'items'] do |id|
         item = Item[id] if id.to_i > 0
 
@@ -149,19 +159,23 @@ class BGBlitz < Roda
   end
 
   def paginate klass, force = true
-    page = request['page'] || 1
-    dataset = klass.reverse_order(:id).paginate(page.to_i, 10, 0)
+    page = (request['page'] || 1).to_i
+    dataset = klass.reverse_order(:id).paginate(page, 10, 0)
     force ? dataset.all : dataset
   end
 
-  def posts_by_type type = nil
+  def posts_and_items type = nil
     posts = paginate Post, false
     posts = posts.where type: type if type
     posts = posts.all
 
     item_ids = posts.flat_map &:item_ids
     items = Item.where id: item_ids.uniq
+    { posts: posts, items: items }
+  end
 
-    widget Views::Posts, posts: posts, items: items.all
+  def posts_by_type type = nil
+    data = posts_and_items type
+    widget Views::Posts, data
   end
 end

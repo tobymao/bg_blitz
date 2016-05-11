@@ -5,7 +5,7 @@ module Views
     SPRITE_URL = '/images/icon_sprites.gif'
 
     ICONS = [
-      Icon.new('rss', 'www.boardgameblitz.com', 'RSS'),
+      Icon.new('rss', '/rss.xml', 'RSS'),
       Icon.new('facebook', 'https://www.facebook.com/BGBlitz', 'Facebook'),
       Icon.new('twitter', 'https://twitter.com/bgameblitz', 'Twitter'),
       Icon.new('google', 'https://google.com', 'Google', true),

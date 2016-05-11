@@ -6,7 +6,7 @@ module Views
     needs :item_hash
 
     def content
-      s = inline(
+      post_style = inline(
         'text-align' => 'left',
         'margin' => '1em 0 1em 0',
         'border-bottom' => '1px solid gray',
@@ -15,11 +15,10 @@ module Views
       )
 
       rendered_text = post.map_text do |id|
-        id.gsub!(/[^0-9]/,'')
-        render_item item_hash[id.to_i]
+        render_item item_hash[id]
       end
 
-      div class: 'post', style: s do
+      div class: 'post', style: post_style do
         h1 post.title
         h2 post.pp_created_at
         rawtext rendered_text

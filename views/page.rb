@@ -114,14 +114,14 @@ module Views
     end
 
     def render_footer
-      s = inline(
+      footer_style = inline(
         'bottom' => '0',
         'color' => BGB_PURPLE,
         'font-size' => '80%',
         'text-align' => 'center',
       )
 
-      div style: s do
+      div style: footer_style do
         rawtext '&copy; Board Game Blitz 2016.'
 
         ls = inline(

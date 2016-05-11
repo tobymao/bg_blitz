@@ -23,7 +23,7 @@ module Views
           csrf_tag
           input type: 'text', name: 'title', placeholder: 'Title', value: item&.title
           br
-          text item.file.original_filename if item&.file
+          a item.file.original_filename, href: item.file_url if item&.file
           br
           input type: 'file', name: 'file'
           br
@@ -31,6 +31,11 @@ module Views
           br
           input type: 'submit'
         end
+      end
+
+      def render_footer
+        widget Pager
+        super
       end
     end
   end
