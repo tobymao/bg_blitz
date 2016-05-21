@@ -6,9 +6,13 @@ Sequel.migration do
       primary_key :id
       String :title, null: false
       String :text, null: false
+      String :description, null: false
+      column :tags, 'text[]'
       post_type :type, null: false, index: true
       DateTime :created_at, null: false
       DateTime :updated_at, null: false
+
+      index :tags, type: 'gin'
     end
 
     create_enum :item_type, %w[image audio youtube]

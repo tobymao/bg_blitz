@@ -46,7 +46,18 @@ module Views
             button title: 'List', class: 'ql-format-button ql-list'
           end
 
-          input type: 'text', name: 'title', placeholder: 'Post Title', value: post&.title
+          input type: 'text', name: 'title', placeholder: 'Title', value: post&.title
+          br
+
+          textarea name: 'description', form: 'form', placeholder: 'Description'do
+            text post&.description
+          end
+          br
+
+          textarea name: 'tags', form: 'form', placeholder: 'Tags CSV' do
+            text post&.tags&.join ','
+          end
+          br
 
           select title: 'type', name: 'type', form: 'form' do
             ::Post.types.each do |type|

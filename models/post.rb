@@ -17,6 +17,12 @@ class Post < Base
 
   def validate
     super
-    validates_presence [:title, :text]
+    validates_presence [:title, :text, :description]
+  end
+
+  def before_save
+    self.tags.map!(&:strip)
+    self.tags.reject!(&:empty?)
+    super
   end
 end

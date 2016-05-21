@@ -36,7 +36,11 @@ module Views
     end
 
     def self.inline hash
-      hash.map { |k, v| "#{k}:#{v}" }.join(';').freeze
+      array = hash.map do |k, v|
+        "#{k.to_s.gsub '_', '-'}:#{v}"
+      end
+
+      array.join(';').freeze
     end
 
     def inline hash

@@ -60,19 +60,23 @@ class BGBlitz < Roda
     Views::Base.params = r.params
 
     r.root do
-      posts_by_type
+      posts_by
     end
 
     r.is 'podcasts' do
-      posts_by_type 'podcast'
+      posts_by type: 'podcast'
     end
 
     r.is 'videos' do
-      posts_by_type 'youtube'
+      posts_by type: 'youtube'
     end
 
     r.is 'blog' do
-      posts_by_type 'blog'
+      posts_by type: 'blog'
+    end
+
+    r.on 'tag/:tag' do |tag|
+      posts_by tags: CGI.unescape(tag)
     end
 
     r.is 'about' do
@@ -85,7 +89,7 @@ class BGBlitz < Roda
 
     r.is 'rss.xml' do
       response.headers['content-type'] = 'xml'
-      data = posts_and_items 'podcast'
+      data = posts_and_items type: 'podcast'
       Views::PodcastRSS.rss data
     end
 
@@ -109,12 +113,11 @@ class BGBlitz < Roda
             external_url: r['external_url'],
           }
 
-          item =
-            if item
-              item.update params
-            else
-              Item.create params
-            end
+          if item
+            item.update params
+          else
+            item = Item.create params
+          end
 
           r.redirect "/admin/items/#{id}"
         end
@@ -134,14 +137,19 @@ class BGBlitz < Roda
         end
 
         r.is method: 'post' do
-          params = { title: r['title'], text: r['text'], type: r['type'] }
+          params = {
+            title:       r['title'],
+            text:        r['text'],
+            type:        r['type'],
+            tags:        r['tags'].split(','),
+            description: r['description'],
+          }
 
-          post =
-            if post
-              post.update params
-            else
-              Post.create params
-            end
+          if post
+            post.update params
+          else
+            post = Post.create params
+          end
 
           r.redirect "/admin/posts/#{post.id}"
         end
@@ -164,9 +172,10 @@ class BGBlitz < Roda
     force ? dataset.all : dataset
   end
 
-  def posts_and_items type = nil
+  def posts_and_items type: nil, tags: nil
     posts = paginate Post, false
     posts = posts.where type: type if type
+    posts = posts.where Sequel.pg_array_op(:tags).contains Array(tags) if tags
     posts = posts.all
 
     item_ids = posts.flat_map &:item_ids
@@ -174,8 +183,8 @@ class BGBlitz < Roda
     { posts: posts, items: items }
   end
 
-  def posts_by_type type = nil
-    data = posts_and_items type
+  def posts_by **filter
+    data = posts_and_items **filter
     widget Views::Posts, data
   end
 end

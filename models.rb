@@ -6,6 +6,8 @@ Sequel::Model.plugin :prepared_statements_associations
 Sequel::Model.plugin :timestamps, update_on_create: true
 Sequel.default_timezone = :utc
 Sequel.extension :migration
+Sequel.extension :pg_array_ops
+DB.extension :pg_array
 DB.extension :pagination
 DB.extension :pg_enum # This needs to be loaded after migration
 

@@ -7,11 +7,11 @@ module Views
 
     def content
       post_style = inline(
-        'text-align' => 'left',
-        'margin' => '1em 0 1em 0',
-        'border-bottom' => '1px solid gray',
-        'padding-bottom' => '1.5em',
-        'line-height' => '1.3em',
+        text_align: 'left',
+        margin: '1em 0 1em 0',
+        border_bottom: '1px solid gray',
+        padding_bottom: '1.5em',
+        line_height: '1.3em',
       )
 
       rendered_text = post.map_text do |id|
@@ -22,6 +22,7 @@ module Views
         h1 post.title
         h2 post.pp_created_at
         rawtext rendered_text
+        render_tags
       end
     end
 
@@ -35,6 +36,22 @@ module Views
         Youtube.new(url: item.external_url).to_html
       else
         ''
+      end
+    end
+
+    def render_tags
+      tag_style = inline(
+        border_radius: '0.5em',
+        padding: '0.2em 0.5em',
+        background: BGB_PURPLE,
+        margin_right: '1em',
+        text_decoration: 'none',
+        font_size: '0.8em',
+        color: 'white',
+      )
+
+      post.tags.each do |tag|
+        a tag, href: "/tag/#{tag}", style: tag_style
       end
     end
   end
