@@ -13,3 +13,4 @@ coverage/
 /.bundle
 /vendor/bundle
 .rvmrc
+.tags
