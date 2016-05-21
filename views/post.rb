@@ -43,10 +43,10 @@ module Views
       tag_style = inline(
         border_radius: '0.5em',
         padding: '0.2em 0.5em',
-        background: BGB_PURPLE,
+        background: 'gray',
         margin_right: '1em',
         text_decoration: 'none',
-        font_size: '0.8em',
+        font_size: '0.7em',
         color: 'white',
       )
 
