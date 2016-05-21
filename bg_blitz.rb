@@ -88,7 +88,7 @@ class BGBlitz < Roda
     end
 
     r.is 'rss.xml' do
-      response.headers['content-type'] = 'xml'
+      response.headers['content-type'] = 'text/xml'
       data = posts_and_items type: 'podcast'
       Views::PodcastRSS.rss data
     end

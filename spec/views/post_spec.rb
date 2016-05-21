@@ -1,7 +1,7 @@
 require './spec/spec_helper'
 
 describe Views::Post do
-  let(:post) { instance_double('Post', map_text: '', title: '', pp_created_at: '') }
+  let(:post) { instance_double('Post', map_text: '', title: '', pp_created_at: '', tags: []) }
   let(:item_hash) { { 1 => instance_double('Item') } }
 
   it 'should render' do
