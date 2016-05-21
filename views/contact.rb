@@ -5,15 +5,15 @@ module Views
     def render_main
 
       container_style = inline(
-        'margin' => '2em 0 2em 0',
-        'line-height' => '1.5em',
-        'text-align' => 'center',
+        margin: '2em 0 2em 0',
+        line_height: '1.5em',
+        text_align: 'center',
       )
 
       link_style = inline(
-        'text-decoration' => 'none',
-        'color' => BGB_PURPLE,
-        'font-weight' => 'bold',
+        text_decoration: 'none',
+        color: BGB_PURPLE,
+        font_weight: 'bold',
       )
 
       div style: container_style do

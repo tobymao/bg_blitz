@@ -13,9 +13,9 @@ module Views
       CSS
 
       container_style = inline(
-      'text-align' => 'center',
-      'max-width' => MOBILE_W,
-      'margin' => '0 auto',
+      text_align: 'center',
+      max_width: MOBILE_W,
+      margin: '0 auto',
       )
 
       item_hash = items.each_with_object({}) do |item, hash|

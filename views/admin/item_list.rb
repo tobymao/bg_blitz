@@ -7,8 +7,8 @@ module Views
       needs :path
 
       def content
-        item_style = inline 'margin' => '0 5px 0 5px'
-        form_style = inline 'display' => 'inline-block', 'margin-left' => '5px'
+        item_style = inline margin: '0 5px 0 5px'
+        form_style = inline display: 'inline-block', margin_left: '5px'
 
         h1 'Previous'
 

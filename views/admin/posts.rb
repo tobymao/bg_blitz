@@ -69,9 +69,7 @@ module Views
 
           input type: 'hidden', name: 'text', id: 'text_field'
 
-          editor_style = inline 'text-align' => 'left'
-
-          div id: 'editor', style: editor_style do
+          div id: 'editor', style: inline(text_align: 'left') do
             rawtext post&.text
           end
 

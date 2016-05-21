@@ -9,7 +9,7 @@ module Views
         Icons::Icon.new('youtube', 'https://www.youtube.com/channel/UCvt8rhQ0E0MThxaFLCbGoWw', 'Youtube'),
       ]
 
-      text_style = inline 'line-height' => '1.3em'
+      text_style = inline line_height: '1.3em'
 
       render_box 'Ambie', BGB_BLUE, ambie_icons, 137, 103
 
@@ -63,16 +63,16 @@ module Views
 
     def render_box name, color, icons, x, y
       box_style = inline(
-        'display' => 'inline-block',
-        'color' => 'white',
-        'width' => '7em',
-        'font-size' => '150%',
-        'margin' => '.5em 0 .5em 0',
-        'text-transform' => 'uppercase',
-        'text-align' => 'center',
-        'vertical-align' => 'top',
-        'background-color' => color,
-        'padding' => '.2em 0 .2em 0',
+        display: 'inline-block',
+        color: 'white',
+        width: '7em',
+        font_size: '150%',
+        margin: '.5em 0 .5em 0',
+        text_transform: 'uppercase',
+        text_align: 'center',
+        vertical_align: 'top',
+        background_color: color,
+        padding: '.2em 0 .2em 0',
       )
 
       style Icons.icons_css(name, Icons::ICONS, x, y, 30)
@@ -81,7 +81,7 @@ module Views
         text name
       end
 
-      ul style: inline(display: 'inline-block', 'margin-top': '4px') do
+      ul style: inline(display: 'inline-block', margin_top: '4px') do
         icons.each do |data|
           li class: "icon #{data.klass} #{name}" do
             a href: data.url, tooltip: data.name

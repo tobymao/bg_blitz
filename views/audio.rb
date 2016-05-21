@@ -5,20 +5,18 @@ module Views
     needs :file
 
     def content
-      container_style = inline 'text-align' => 'left'
-
-      div style: container_style do
+      div style: inline(text_align: 'left') do
         url = file.url
 
-        audio style: 'width: 100%', controls: '', preload: 'none' do
+        audio style: inline(width: '100%'), controls: '', preload: 'none' do
           source src: url, type: file.mime_type
           text 'Your browser does not support the audio element.'
         end
 
         download_style = inline(
-          'text-align' => 'right',
-          'margin-top' => '0.5em',
-          'font-size' => '12px',
+          text_align: 'right',
+          margin_top: '0.5em',
+          font_size: '12px',
         )
 
         div style: download_style  do

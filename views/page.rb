@@ -22,9 +22,7 @@ module Views
           meta name: 'apple-mobile-web-app-capable', content: 'yes'
         end
 
-        s = inline 'min-height' => '95%'
-
-        div style: s do
+        div style: inline(min_height: '95%') do
           div class: 'bgb_container' do
             render_banner
           end
@@ -115,19 +113,19 @@ module Views
 
     def render_footer
       footer_style = inline(
-        'bottom' => '0',
-        'color' => BGB_PURPLE,
-        'font-size' => '80%',
-        'text-align' => 'center',
+        bottom: '0',
+        color: BGB_PURPLE,
+        font_size: '80%',
+        text_align: 'center',
       )
 
       div style: footer_style do
         rawtext '&copy; Board Game Blitz 2016.'
 
         ls = inline(
-          'margin' => '0.5em',
-          'text-decoration' => 'none',
-          'color' => BGB_PURPLE,
+          margin: '0.5em',
+          text_decoration: 'none',
+          color: BGB_PURPLE,
         )
 
         div do

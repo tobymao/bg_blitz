@@ -6,7 +6,7 @@ module Views
     def content
       render_style
 
-      div style: 'position:relative' do
+      div style: inline(position: 'relative') do
         a href: '/' do
           div class: 'banner'
         end

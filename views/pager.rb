@@ -5,10 +5,10 @@ module Views
     def content
       page = (params['page'] || 1).to_i
 
-      page_style = inline 'text-align' => 'center', 'margin-bottom' => '1em'
+      page_style = inline text_align: 'center', margin_bottom: '1em'
 
       div style: page_style do
-        link_style = inline 'color' => BGB_GRAY, 'margin-right' => '1em'
+        link_style = inline color: BGB_GRAY, margin_right: '1em'
         path = current_path + '?page='
         a 'Prev', href: path + "#{page - 1}", style: link_style if page > 1
         a 'Next', href: path + "#{page + 1}", style: link_style
