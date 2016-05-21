@@ -43,7 +43,7 @@ module Views
 
         @media only screen and (min-width: #{Base::MOBILE_W}) {
           .banner {
-            background-image: url(/images/bgb_logo_t.gif);
+            background-image: url(/images/bgb_logo_t.png);
             width: 300px;
           }
         }
