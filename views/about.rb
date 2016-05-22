@@ -4,9 +4,8 @@ module Views
   class About < Page
     def render_main
       ambie_icons = [
-        Icons::Icon.new('facebook', 'https://www.facebook.com/ambie.valdes', 'Facebook'),
         Icons::Icon.new('bgg', 'https://boardgamegeek.com/user/ambierona', 'BGG'),
-        Icons::Icon.new('youtube', 'https://www.youtube.com/channel/UCvt8rhQ0E0MThxaFLCbGoWw', 'Youtube'),
+        Icons::Icon.new('youtube', 'https://www.youtube.com/ambierona', 'Youtube'),
       ]
 
       text_style = inline line_height: '1.3em'
@@ -24,39 +23,23 @@ module Views
       end
 
       cassadi_icons = [
-        Icons::Icon.new('facebook', 'https://www.facebook.com/ambie', 'Facebook'),
-        Icons::Icon.new('bgg', 'https://www.facebook.com/ambie', 'BGG'),
-        Icons::Icon.new('youtube', 'https://www.facebook.com/ambie', 'Youtube'),
+        Icons::Icon.new('bgg', 'https://boardgamegeek.com/user/noajayne', 'BGG'),
       ]
 
       render_box 'Cassadi', BGB_PINK, cassadi_icons, 205, 171
 
       div style: text_style do
-        text "Cassadi has been playing games for as long as she can remember. When she was a kid, she played board, card, and video games "\
-          "with her family (classics like Monopoly, Risk, Clue, Stratego, Rummikub, Gin, Euchre...). She also used to play D&D "\
-          "with her family on camping trips. In college, she started playing 'modern' board games with friends, starting with Dominion "\
-          "and Tichu. After graduating college, she and her boyfriend (now husband) started building up a collection and getting more "\
-          "into the hobby together. Now, Ambie plays a lot of 2-player games with her husband. They enjoy thematic Euros - games that "\
-          "integrate the mechanics with the theme. Some of Ambie's favorite games are The Resistance: Avalon, Codenames, Arkwright, Space "\
-          "Alert, and Tragedy Looper. Outside of board games, she enjoys singing, knitting, crocheting, and Brazilian Jiu Jitsu."
+        text "Cassadi bio coming soon! "\
       end
 
       crystal_icons = [
-        Icons::Icon.new('facebook', 'https://www.facebook.com/ambie', 'Facebook'),
-        Icons::Icon.new('bgg', 'https://www.facebook.com/ambie', 'BGG'),
-        Icons::Icon.new('youtube', 'https://www.facebook.com/ambie', 'Youtube'),
+        Icons::Icon.new('bgg', 'https://boardgamegeek.com/user/CrysP', 'BGG'),
       ]
 
       render_box 'Crystal', BGB_PURPLE, crystal_icons, 69, 35
 
       div style: text_style do
-        text "Crystal has been playing games for as long as she can remember. When she was a kid, she played board, card, and video games "\
-          "with her family (classics like Monopoly, Risk, Clue, Stratego, Rummikub, Gin, Euchre...). She also used to play D&D "\
-          "with her family on camping trips. In college, she started playing 'modern' board games with friends, starting with Dominion "\
-          "and Tichu. After graduating college, she and her boyfriend (now husband) started building up a collection and getting more "\
-          "into the hobby together. Now, Ambie plays a lot of 2-player games with her husband. They enjoy thematic Euros - games that "\
-          "integrate the mechanics with the theme. Some of Ambie's favorite games are The Resistance: Avalon, Codenames, Arkwright, Space "\
-          "Alert, and Tragedy Looper. Outside of board games, she enjoys singing, knitting, crocheting, and Brazilian Jiu Jitsu."
+        text "Crystal bio coming soon! "\
       end
     end
     static :render_main
