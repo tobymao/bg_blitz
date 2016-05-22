@@ -6,6 +6,8 @@ set :tmp_dir, "#{fetch(:deploy_to)}/tmp"
 set :ssh_options, forward_agent: true
 
 after 'deploy:restart', 'deploy:cleanup'
+after 'deploy', 'deploy:copy'
+after 'deploy', 'deploy:migrate'
 
 namespace :deploy do
   desc 'Rolling restart'
@@ -32,6 +34,18 @@ namespace :deploy do
       within fetch(:current_dir) do
         execute :bundle, 'exec thin stop -C config/thin.yml'
       end
+    end
+  end
+
+  task :copy do
+    on roles :all do
+      upload! '.env.rb', fetch(:current_dir)
+    end
+  end
+
+  task :migrate do
+    on roles :all do
+      execute :bundle , 'exec rake prod_up'
     end
   end
 end
