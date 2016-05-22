@@ -2,7 +2,7 @@ module Views
   module Icons
     Icon = Struct.new :klass, :url, :name, :hidden
 
-    SPRITE_URL = '/images/icon_sprites.gif'
+    SPRITE_URL = '/images/icon_sprites.png'
 
     ICONS = [
       Icon.new('rss', '/rss.xml', 'RSS'),
