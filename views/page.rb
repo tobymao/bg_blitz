@@ -16,6 +16,7 @@ module Views
         head do
           link rel: 'stylesheet', type: 'text/css', href: 'https://fonts.googleapis.com/css?family=Open+Sans'
           link rel: 'stylesheet', type: 'text/css', href: '/vendor/reset.min.css'
+          link rel: 'shortcut icon', type: 'image/png', href: '/images/favicon.ico'
           render_head
           render_style
           meta name: 'viewport', content: 'width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=0'

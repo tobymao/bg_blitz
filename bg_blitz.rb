@@ -3,26 +3,25 @@ PRODUCTION = ENV['RACK_ENV'] == 'production'
 require 'roda'
 require 'fortitude'
 require 'shrine'
+require "shrine/storage/file_system"
 require './models.rb'
 
 Shrine.plugin :sequel
 Shrine.plugin :rack_file
 Shrine.plugin :validation_helpers
-
-unless PRODUCTION
-  require 'better_errors'
-  require "shrine/storage/file_system"
-
-  Shrine.storages = {
-    cache: Shrine::Storage::FileSystem.new('public', prefix: 'uploads/cache'),
-    store: Shrine::Storage::FileSystem.new('public', prefix: 'uploads/store'),
-  }
-end
+Shrine.storages = {
+  cache: Shrine::Storage::FileSystem.new('public', prefix: 'uploads/cache'),
+  store: Shrine::Storage::FileSystem.new('public', prefix: 'uploads/store'),
+}
 
 FOLDERS = %w[views models uploaders]
 
 FOLDERS.each do |folder|
   Dir["./#{folder}/**/*.rb" ].each { |file| require file }
+end
+
+unless PRODUCTION
+  require 'better_errors'
 end
 
 class BGBlitz < Roda
@@ -47,11 +46,11 @@ class BGBlitz < Roda
   plugin :status_handler
 
   status_handler 403 do
-    "You are forbidden from seeing that!"
+    'You are forbidden from seeing that!'
   end
 
   status_handler 404 do
-    "Where did it go?"
+    "Uh oh, there doesn't seem to be anything here."
   end
 
   route do |r|
