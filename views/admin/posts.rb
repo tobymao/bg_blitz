@@ -55,7 +55,11 @@ module Views
           br
 
           textarea name: 'tags', form: 'form', placeholder: 'Tags CSV' do
-            text post&.tags&.join ','
+            if tags = post&.tags
+              text tags.join ','
+            else
+              text 'Uncategorized'
+            end
           end
           br
 
