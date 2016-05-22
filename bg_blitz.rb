@@ -179,7 +179,7 @@ class BGBlitz < Roda
 
     item_ids = posts.flat_map &:item_ids
     items = Item.where id: item_ids.uniq
-    { posts: posts, items: items }
+    { posts: posts, items: items.all }
   end
 
   def posts_by **filter

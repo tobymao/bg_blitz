@@ -21,7 +21,7 @@ module Views
       channel.link = SITE_URL
       channel.language = 'en-us'
       channel.copyright = "Copyright #{Date.today.year} Board Game Blitz"
-      channel.lastBuildDate = posts.first.updated_at
+      channel.lastBuildDate = posts.first&.updated_at
 
       channel.image = RSS::Rss::Channel::Image.new
       channel.image.url = IMAGE_URL
