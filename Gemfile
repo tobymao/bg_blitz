@@ -14,7 +14,6 @@ group :development, :test do
   gem "capistrano"
   gem 'capistrano-bundler'
   gem 'rvm1-capistrano3', require: false
-  gem 'rake'
 
   gem 'rspec'
   gem 'simplecov'

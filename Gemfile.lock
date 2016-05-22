@@ -113,7 +113,6 @@ DEPENDENCIES
   fortitude
   rack-test
   rack_csrf
-  rake
   rerun
   roda
   roda-basic-auth
