@@ -7,7 +7,7 @@ set :tmp_dir, "#{fetch(:deploy_to)}/tmp"
 set :ssh_options, forward_agent: true
 
 before 'deploy', 'rvm1:install:ruby'
-#before 'deploy', 'rvm1:install:gems'
+before 'deploy', 'rvm1:install:gems'
 
 after 'deploy:restart', 'deploy:cleanup'
 after 'deploy', 'deploy:copy'

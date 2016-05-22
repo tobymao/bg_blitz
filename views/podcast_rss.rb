@@ -7,7 +7,7 @@ module Views
     SITE_URL  = 'http://www.boardgameblitz.com'.freeze
     IMAGE_URL = SITE_URL + '/images/logo_itunes.jpg'.freeze
 
-    def self.rss posts: posts, items: items
+    def self.rss posts:, items:
       rss = RSS::Rss.new '2.0'
       channel = RSS::Rss::Channel.new
 

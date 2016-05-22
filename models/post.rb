@@ -1,3 +1,5 @@
+require './models/base'
+
 class Post < Base
   ITEM_REGEX = /{{(.*?)}}/
 

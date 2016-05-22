@@ -1,4 +1,5 @@
-require_relative '../uploaders/item_uploader.rb'
+require './uploaders/item_uploader'
+require './models/base'
 
 class Item < Base
   include ItemUpdloader[:file]
