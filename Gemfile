@@ -10,6 +10,11 @@ gem 'shrine'
 gem 'roda-basic-auth'
 
 group :development, :test do
+  # deploy
+  gem "capistrano"
+  gem 'capistrano-bundler'
+  gem 'rvm1-capistrano3', require: false
+
   gem 'rspec'
   gem 'simplecov'
   gem 'factory_girl'
