@@ -113,6 +113,7 @@ DEPENDENCIES
   fortitude
   rack-test
   rack_csrf
+  rake
   rerun
   roda
   roda-basic-auth
@@ -125,4 +126,4 @@ DEPENDENCIES
   thin
 
 BUNDLED WITH
-   1.12.3
+   1.12.4
