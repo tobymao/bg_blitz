@@ -4,6 +4,7 @@ set :repo_url, 'git@github.com:tobymao/bg_blitz.git'
 set :deploy_to, '/home/deploy/apps/bg_blitz'
 set :current_dir, "#{fetch(:deploy_to)}/current"
 set :tmp_dir, "#{fetch(:deploy_to)}/tmp"
+set :default_env, { 'RACK_ENV' => 'production' }
 set :ssh_options, forward_agent: true
 
 before 'deploy', 'rvm1:install:ruby'

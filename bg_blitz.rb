@@ -33,7 +33,7 @@ class BGBlitz < Roda
     BetterErrors.application_root = __dir__
   end
 
-  use Rack::Session::Cookie, key: '_App_session', secret: File.read('.session_secret')
+  use Rack::Session::Cookie, key: '_App_session', secret: ENV['SECRET']
 
   plugin :default_headers, {
     'Content-Type' => 'text/html',
