@@ -80,7 +80,6 @@ module Views
         .icon a {
           height: 34px;
           display: block;
-          font-weight: normal;
         }
 
         .icon a:hover {
@@ -97,6 +96,10 @@ module Views
           background-color: white;
           color: #{Base::BGB_PURPLE};
           z-index: 999;
+        }
+
+        .main .icon a {
+          font-weight: normal;
         }
 
         .main a {
