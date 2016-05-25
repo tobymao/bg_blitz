@@ -14,7 +14,7 @@ module Views
     def content
       html do
         head do
-          link rel: 'stylesheet', type: 'text/css', href: 'https://fonts.googleapis.com/css?family=Open+Sans'
+          link rel: 'stylesheet', type: 'text/css', href: 'https://fonts.googleapis.com/css?family=Open+Sans:400,400italic,700'
           link rel: 'stylesheet', type: 'text/css', href: '/vendor/reset.min.css'
           link rel: 'shortcut icon', type: 'image/png', href: '/images/favicon.ico'
           render_head
@@ -31,7 +31,7 @@ module Views
 
           render_nav
 
-          div class: 'bgb_container' do
+          div class: 'bgb_container main' do
             render_main
           end
         end
@@ -96,6 +96,12 @@ module Views
           background-color: white;
           color: #{Base::BGB_PURPLE};
           z-index: 999;
+        }
+
+        .main a {
+          text-decoration: none;
+          font-weight: bold;
+          color: #{BGB_PURPLE};
         }
       CSS
     end

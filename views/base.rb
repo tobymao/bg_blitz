@@ -10,7 +10,7 @@ module Views
     MAX_W    = '950px'
 
     needs csrf_tag: ''
-    needs request: {}
+    needs request: nil
 
     doctype :html5
 
@@ -36,11 +36,11 @@ module Views
     end
 
     def params
-      request['params'] || {}
+      request&.params || {}
     end
 
     def current_path
-      request['path'] || ''
+      request&.path || ''
     end
   end
 end
