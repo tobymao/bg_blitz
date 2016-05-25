@@ -47,6 +47,7 @@ module Views
         margin_right: '1em',
         text_decoration: 'none',
         font_size: '0.7em',
+        font_weight: 'normal',
         color: 'white',
       )
 
