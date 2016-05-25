@@ -80,6 +80,7 @@ module Views
         .icon a {
           height: 34px;
           display: block;
+          font-weight: normal;
         }
 
         .icon a:hover {
