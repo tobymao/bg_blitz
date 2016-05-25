@@ -118,7 +118,7 @@ module Views
     end
 
     def render_nav
-      widget Nav.new(links: DEFAULT_LINKS)
+      widget Nav, links: DEFAULT_LINKS
     end
 
     def render_main

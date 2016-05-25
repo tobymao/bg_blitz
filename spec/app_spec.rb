@@ -29,7 +29,7 @@ describe BGBlitz do
     end
 
     paths.each do |path|
-      it 'should return 403 without auth' do
+      it 'should return 401 without auth' do
         get path
         expect(last_response.status).to eq 401
       end

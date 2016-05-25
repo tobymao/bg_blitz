@@ -54,10 +54,6 @@ class BGBlitz < Roda
   end
 
   route do |r|
-    Views::Base.csrf_tag = csrf_tag
-    Views::Base.current_path = r.path
-    Views::Base.params = r.params
-
     r.root do
       posts_by
     end
@@ -137,10 +133,10 @@ class BGBlitz < Roda
 
         r.is method: 'post' do
           params = {
-            title:       r['title'],
-            text:        r['text'],
-            type:        r['type'],
-            tags:        r['tags'].split(','),
+            title: r['title'],
+            text: r['text'],
+            type: r['type'],
+            tags: r['tags'].split(','),
             description: r['description'],
           }
 
@@ -162,6 +158,8 @@ class BGBlitz < Roda
   end
 
   def widget klass, needs = {}
+    needs[:csrf_tag] ||= csrf_tag
+    needs[:request] ||= request
     klass.new(**needs).to_html
   end
 

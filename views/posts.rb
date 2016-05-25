@@ -24,7 +24,7 @@ module Views
 
       div style: container_style do
         posts.each do |p|
-          widget Views::Post.new post: p , item_hash: item_hash
+          widget Views::Post, post: p, item_hash: item_hash
         end
       end
     end

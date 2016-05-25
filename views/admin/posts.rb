@@ -26,7 +26,7 @@ module Views
         url << "/#{post.id}" if post
 
         form id: 'form', action: url, method: 'post', onsubmit: 'BGBPosts.onSubmit(event)' do
-          csrf_tag
+          rawtext csrf_tag
 
           div id: 'toolbar' do
             select title: 'Text Alignment', class: 'ql-align' do

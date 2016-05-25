@@ -9,31 +9,10 @@ module Views
     MOBILE_W = '600px'
     MAX_W    = '950px'
 
+    needs csrf_tag: ''
+    needs request: {}
+
     doctype :html5
-
-    def self.csrf_tag= tag
-      @@csrf_tag = tag
-    end
-
-    def csrf_tag
-      rawtext @@csrf_tag
-    end
-
-    def self.current_path= path
-      @@current_path= path
-    end
-
-    def current_path
-      @@current_path
-    end
-
-    def self.params= params
-      @@params= params
-    end
-
-    def params
-      @@params
-    end
 
     def self.inline hash
       array = hash.map do |k, v|
@@ -45,6 +24,23 @@ module Views
 
     def inline hash
       self.class.inline hash
+    end
+
+    # override
+    def widget w, hash = nil, &block
+      hash ||= {}
+      hash[:csrf_tag] ||= csrf_tag
+      hash[:request] ||= request
+
+      super w, hash, &block
+    end
+
+    def params
+      request['params'] || {}
+    end
+
+    def current_path
+      request['path'] || ''
     end
   end
 end

@@ -23,7 +23,7 @@ module Views
               a 'edit', href: url, style: item_style
 
               form action: "#{url}/delete", method: 'post', onsubmit: submit_js, style: form_style do
-                csrf_tag
+                rawtext csrf_tag
                 input type: 'submit', value: 'delete'
               end
             end

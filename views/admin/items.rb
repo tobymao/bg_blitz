@@ -20,7 +20,7 @@ module Views
         url << "/#{item.id}" if item
 
         form id: 'form', action: url, method: 'post', enctype: 'multipart/form-data' do
-          csrf_tag
+          rawtext csrf_tag
           input type: 'text', name: 'title', placeholder: 'Title', value: item&.title
           br
           a item.file.original_filename, href: item.file_url if item&.file

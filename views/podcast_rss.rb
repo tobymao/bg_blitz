@@ -33,7 +33,7 @@ module Views
       channel.itunes_owner.itunes_name= NAME
       channel.itunes_owner.itunes_email= 'boardgameblitz@gmail.com'
 
-      channel.itunes_keywords = %w[boardgame board game games gaming cardboard bgg blitz]
+      channel.itunes_keywords = %w[boardgame board game games gaming cardboard bgg blitz tabletop]
       channel.itunes_subtitle = 'Podcasts on the go!'
       channel.itunes_summary = 'Ambie, Cassadi, and Crystal discussing various topics about board games'
 
