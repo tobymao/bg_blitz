@@ -102,8 +102,6 @@ module Views
               event.target.submit();
             },
           };
-
-          console.log(BGBPosts.editor.getHTML());
         JS
       end
 
