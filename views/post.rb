@@ -48,12 +48,13 @@ module Views
         text_decoration: 'none',
         font_size: '0.7em',
         font_weight: 'normal',
-        white_space: 'nowrap',
         color: 'white',
       )
 
       post.tags.each do |tag|
-        a tag, href: "/tag/#{tag}", style: tag_style
+        div style: inline(display: 'inline-block') do
+          a tag, href: "/tag/#{tag}", style: tag_style
+        end
       end
     end
   end
