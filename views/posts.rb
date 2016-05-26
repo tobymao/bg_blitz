@@ -6,12 +6,6 @@ module Views
     needs :items
 
     def render_main
-      style <<~CSS
-        .post div {
-          margin-bottom: 1em;
-        }
-      CSS
-
       container_style = inline(
         text_align: 'center',
         max_width: MOBILE_W,

@@ -19,8 +19,13 @@ module Views
           font_size: '12px',
         )
 
+        link_style = inline(
+          color: BGB_GRAY,
+          font_weight: 'normal',
+        )
+
         div style: download_style  do
-          a 'Download', href: url, style: "color:#{BGB_GRAY}"
+          a 'Download', href: url, style: link_style
         end
       end
     end

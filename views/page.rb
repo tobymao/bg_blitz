@@ -71,6 +71,10 @@ module Views
           max-width: #{MAX_W};
         }
 
+        .bgb_container.main {
+          font-size: 0.9em;
+        }
+
         .icon {
           display: inline-block;
           width: 30px;

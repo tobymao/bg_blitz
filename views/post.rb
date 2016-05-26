@@ -18,7 +18,7 @@ module Views
         render_item item_hash[id]
       end
 
-      div class: 'post', style: post_style do
+      div style: post_style do
         h1 post.title
         h2 post.pp_created_at
         rawtext rendered_text
@@ -46,14 +46,17 @@ module Views
         background: 'gray',
         margin_right: '1em',
         text_decoration: 'none',
-        font_size: '0.7em',
+        font_size: '0.8em',
         font_weight: 'normal',
+        margin_top: '1em',
         color: 'white',
       )
 
-      post.tags.each do |tag|
-        div style: inline(display: 'inline-block') do
-          a tag, href: "/tag/#{tag}", style: tag_style
+      div style: inline(margin_top: '1em', line_height: '2em') do
+        post.tags.each do |tag|
+          div style: inline(display: 'inline-block') do
+            a tag, href: "/tag/#{tag}", style: tag_style
+          end
         end
       end
     end
