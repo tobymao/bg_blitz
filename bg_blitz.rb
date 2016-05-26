@@ -10,7 +10,7 @@ Shrine.plugin :sequel
 Shrine.plugin :rack_file
 Shrine.plugin :validation_helpers
 
-SHRINE_PATH = PRODUCTION ? '/srv/bg_blitz' : 'public'
+SHRINE_PATH = PRODUCTION ? '/home/deploy/public/bg_blitz' : 'public'
 
 Shrine.storages = {
   cache: Shrine::Storage::FileSystem.new('/tmp/bg_blitz'),
