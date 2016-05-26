@@ -58,10 +58,12 @@ module Views
         }
 
         h2 {
-          font-weight: bold ;
+          font-weight: bold;
           font-size: 0.8em;
           margin-bottom: 1em;
         }
+
+        i { font-style: italic; }
 
         .bgb_container {
           position: relative;
@@ -71,9 +73,7 @@ module Views
           max-width: #{MAX_W};
         }
 
-        .bgb_container.main {
-          font-size: 0.9em;
-        }
+        .bgb_container.main { font-size: 0.9em; }
 
         .icon {
           display: inline-block;
