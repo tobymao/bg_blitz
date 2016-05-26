@@ -48,6 +48,7 @@ module Views
         text_decoration: 'none',
         font_size: '0.7em',
         font_weight: 'normal',
+        white_space: 'nowrap',
         color: 'white',
       )
 
