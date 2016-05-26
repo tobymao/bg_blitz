@@ -12,7 +12,7 @@ module Views
         h1 'Upload File'
 
         render_new
-        widget ItemList.new items: items, path: PATH
+        widget ItemList, items: items, path: PATH
       end
 
       def render_new

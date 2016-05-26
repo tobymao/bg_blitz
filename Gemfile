@@ -9,6 +9,7 @@ gem 'rack_csrf'
 gem 'shrine'
 gem 'roda-basic-auth'
 gem 'rake'
+gem 'ruby-mp3info'
 
 group :development, :test do
   # deploy

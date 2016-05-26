@@ -2,10 +2,16 @@ require './uploaders/item_uploader'
 require './models/base'
 
 class Item < Base
-  include ItemUpdloader[:file]
+  include ItemUploader[:file]
 
   def self.types
     db_schema[:type][:enum_values]
+  end
+
+  def itunes_duration
+    return unless self.type == 'audio'
+    seconds = file.metadata['duration']
+    Time.at(seconds).utc.strftime("%H:%M:%S")
   end
 
   def before_validation

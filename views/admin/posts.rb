@@ -17,7 +17,7 @@ module Views
       def render_main
         h1 'Posts'
         render_new
-        widget ItemList.new items: posts, path: PATH
+        widget ItemList, items: posts, path: PATH
         render_js
       end
 

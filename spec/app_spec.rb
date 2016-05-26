@@ -11,7 +11,7 @@ describe BGBlitz do
 
   describe 'get requests' do
     %w[/ /podcasts /videos /blog /about /contact /rss.xml].each do |path|
-      it 'should return 200' do
+      it "#{path} should return 200" do
         get path
         expect(last_response).to be_ok
       end
@@ -22,14 +22,14 @@ describe BGBlitz do
     paths = %w[admin/items admin/posts]
 
     paths.each do |path|
-      it 'should return 200 with auth' do
+      it "#{path} should return 200 with auth" do
         get path, {}, auth_header
         expect(last_response).to be_ok
       end
     end
 
     paths.each do |path|
-      it 'should return 401 without auth' do
+      it "#{path} should return 401 without auth" do
         get path
         expect(last_response.status).to eq 401
       end

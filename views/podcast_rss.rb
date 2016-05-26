@@ -58,15 +58,20 @@ module Views
         file_url = SITE_URL + item.file_url
         channel_item.guid = RSS::Rss::Channel::Item::Guid.new
         channel_item.guid.content = file_url
-        channel_item.enclosure = RSS::Rss::Channel::Item::Enclosure.new file_url, item.file.size, item.file.mime_type
+        channel_item.enclosure = RSS::Rss::Channel::Item::Enclosure.new(
+          file_url,
+          item.file.size,
+          item.file.mime_type,
+        )
 
         channel_item.itunes_summary = post.map_text{}.gsub(/(<[^>]*>)|\n|\t/s) {"\n "}
         channel_item.itunes_subtitle = post.title
         channel_item.itunes_explicit = 'No'
         channel_item.itunes_author = NAME
         channel_item.itunes_keywords = post.tags
+        channel_item.itunes_duration = RSS::ITunesItemModel::ITunesDuration.new
+        channel_item.itunes_duration.content = item.itunes_duration
 
-        # TODO can add duration once we can compute that somehow
         channel.items << channel_item
       end
 
@@ -76,4 +81,3 @@ module Views
 
   end
 end
-
