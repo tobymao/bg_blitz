@@ -140,7 +140,7 @@ class BGBlitz < Roda
             text: r['text'].scrub,
             type: r['type'],
             tags: r['tags'].split(','),
-            description: r['description'],
+            description: r['description'].scrub,
           }
 
           if post
