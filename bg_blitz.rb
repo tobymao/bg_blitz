@@ -9,9 +9,12 @@ require './models.rb'
 Shrine.plugin :sequel
 Shrine.plugin :rack_file
 Shrine.plugin :validation_helpers
+
+SHRINE_PATH = PRODUCTION ? '/srv/bg_blitz' : 'public'
+
 Shrine.storages = {
-  cache: Shrine::Storage::FileSystem.new('public', prefix: 'uploads/cache'),
-  store: Shrine::Storage::FileSystem.new('public', prefix: 'uploads/store'),
+  cache: Shrine::Storage::FileSystem.new('/tmp/bg_blitz'),
+  store: Shrine::Storage::FileSystem.new(SHRINE_PATH, prefix: 'uploads/store'),
 }
 
 FOLDERS = %w[views models uploaders]
