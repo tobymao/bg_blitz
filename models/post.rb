@@ -17,6 +17,13 @@ class Post < Base
     end
   end
 
+  def summary
+    map_text { }
+      .gsub(/(<[^>]*>)|\n|\t/, "\n")
+      .gsub(/&nbsp/, "\t")
+      .strip
+  end
+
   def validate
     super
     validates_presence [:title, :text, :description]
