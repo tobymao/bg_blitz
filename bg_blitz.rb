@@ -28,6 +28,8 @@ unless PRODUCTION
 end
 
 class BGBlitz < Roda
+  PAGE_LIMIT = 10.freeze
+
   unless PRODUCTION
     opts[:root] = Dir.pwd
     plugin :static, %w[/html /vendor /images /uploads]
@@ -166,9 +168,17 @@ class BGBlitz < Roda
     klass.new(**needs).to_html
   end
 
+  # instead of counting the database
+  # we fetch +1 to see if there's more
   def paginate klass, force = true
-    page = (request['page'] || 1).to_i
-    dataset = klass.reverse_order(:id).paginate(page, 10, 0)
+    page = request['page'].to_i
+    page = 1 if page == 0
+
+    dataset = klass
+      .reverse_order(:id)
+      .limit(PAGE_LIMIT + 1)
+      .offset((page - 1) * PAGE_LIMIT)
+
     force ? dataset.all : dataset
   end
 
@@ -185,6 +195,7 @@ class BGBlitz < Roda
 
   def posts_by **filter
     data = posts_and_items **filter
+    data[:limit] = PAGE_LIMIT
     widget Views::Posts, data
   end
 end

@@ -4,6 +4,7 @@ module Views
   class Posts < Page
     needs :posts
     needs :items
+    needs :limit
 
     def render_main
       container_style = inline(
@@ -17,14 +18,14 @@ module Views
       end
 
       div style: container_style do
-        posts.each do |p|
+        posts.take(limit).each do |p|
           widget Views::Post, post: p, item_hash: item_hash
         end
       end
     end
 
     def render_footer
-      widget Pager
+      widget Pager, more: posts.size > limit
       super
     end
 

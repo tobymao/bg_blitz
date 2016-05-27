@@ -8,7 +8,6 @@ Sequel.default_timezone = :utc
 Sequel.extension :migration
 Sequel.extension :pg_array_ops
 DB.extension :pg_array
-DB.extension :pagination
 DB.extension :pg_enum # This needs to be loaded after migration
 
 if ENV['RACK_ENV'] == 'development'

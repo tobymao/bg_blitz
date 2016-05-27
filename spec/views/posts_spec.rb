@@ -6,6 +6,6 @@ describe Views::Posts do
   let(:posts) { [ instance_double('Post')] }
 
   it 'should render' do
-    expect(Views::Posts.new(items: items, posts: posts)).not_to be_nil
+    expect(Views::Posts.new(items: items, posts: posts, limit: 10)).not_to be_nil
   end
 end

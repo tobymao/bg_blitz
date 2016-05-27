@@ -2,6 +2,8 @@ require './views/base'
 
 module Views
   class Pager < Base
+    needs more: true
+
     def content
       page = (params['page'] || 1).to_i
 
@@ -11,7 +13,7 @@ module Views
         link_style = inline color: BGB_GRAY, margin_right: '1em'
         path = current_path + '?page='
         a 'Prev', href: path + "#{page - 1}", style: link_style if page > 1
-        a 'Next', href: path + "#{page + 1}", style: link_style
+        a 'Next', href: path + "#{page + 1}", style: link_style if more
       end
     end
   end
