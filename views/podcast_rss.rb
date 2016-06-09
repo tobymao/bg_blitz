@@ -64,7 +64,7 @@ module Views
           item.file.mime_type,
         )
 
-        channel_item.itunes_summary = post.summary
+        channel_item.itunes_summary = post.description
         channel_item.itunes_subtitle = post.title
         channel_item.itunes_explicit = 'No'
         channel_item.itunes_author = NAME
