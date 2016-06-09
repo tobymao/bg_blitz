@@ -4,24 +4,46 @@ module Views
   class Post < Base
     needs :post
     needs :item_hash
+    needs solo: false
 
     def content
-      post_style = inline(
+      style_hash = {
         text_align: 'left',
         margin: '1em 0 1em 0',
-        border_bottom: '1px solid gray',
         padding_bottom: '1.5em',
         line_height: '1.3em',
-      )
+      }
+
+      style_hash[:border_bottom] = '1px solid gray' unless solo
+
+      post_style = inline style_hash
 
       rendered_text = post.map_text do |id|
         render_item item_hash[id]
       end
 
       div style: post_style do
-        h1 post.title
+        post_path = "/posts/#{post.id}/#{post.title}"
+        link_style = inline color: 'black', font_weight: 'normal'
+
+        a href: post_path, style: link_style do
+          h1 post.title
+        end
+
         h2 post.pp_created_at
+
         rawtext rendered_text
+
+        more_style = inline(
+          border_top: '1px solid gray',
+          margin_top: '1em',
+          width: '6em',
+        )
+
+        div style: more_style  do
+          a 'Read More', href: post_path
+        end unless solo
+
         render_tags
       end
     end
@@ -61,4 +83,5 @@ module Views
       end
     end
   end
+
 end

@@ -41,7 +41,14 @@ module Views
     end
 
     def render_head
-      title 'Board Game Blitz'
+      if page_title
+        title "#{page_title} | Board Game Blitz"
+      else
+        title 'Board Game Blitz'
+      end
+    end
+
+    def page_title
     end
 
     def render_style

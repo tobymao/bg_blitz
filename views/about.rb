@@ -54,6 +54,10 @@ module Views
     end
     static :render_main
 
+    def page_title
+      'About'
+    end
+
     def render_box name, color, icons, x, y
       box_style = inline(
         display: 'inline-block',

@@ -25,5 +25,10 @@ module Views
         a 'Board Game Blitz', href: 'https://www.boardgamegeek.com/guild/2581', target: 'blank'
       end
     end
+
+    def page_title
+      'Contact'
+    end
+
   end
 end

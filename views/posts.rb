@@ -4,7 +4,9 @@ module Views
   class Posts < Page
     needs :posts
     needs :items
-    needs :limit
+    needs limit: 10
+    needs page_title: nil
+    needs solo: false
 
     def render_main
       container_style = inline(
@@ -19,7 +21,7 @@ module Views
 
       div style: container_style do
         posts.take(limit).each do |p|
-          widget Views::Post, post: p, item_hash: item_hash
+          widget Views::Post, post: p, item_hash: item_hash, solo: solo
         end
       end
     end

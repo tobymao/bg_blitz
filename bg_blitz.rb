@@ -64,19 +64,27 @@ class BGBlitz < Roda
     end
 
     r.is 'podcasts' do
-      posts_by type: 'podcast'
+      posts_by 'Podcasts', type: 'podcast'
     end
 
     r.is 'videos' do
-      posts_by type: 'youtube'
+      posts_by 'Videos', type: 'youtube'
     end
 
     r.is 'blog' do
-      posts_by type: 'blog'
+      posts_by 'Blog', type: 'blog'
+    end
+
+    r.on 'posts/:id' do |id|
+      post = Post[id]
+      items = Item.where id: post.item_ids.uniq
+      data = { posts: [post], items: items.all, page_title: post.title, solo: true }
+      widget Views::Posts, data
     end
 
     r.on 'tag/:tag' do |tag|
-      posts_by tags: CGI.unescape(tag)
+      clean_tag = CGI.unescape(tag)
+      posts_by clean_tag, tags: clean_tag
     end
 
     r.is 'about' do
@@ -193,9 +201,10 @@ class BGBlitz < Roda
     { posts: posts, items: items.all }
   end
 
-  def posts_by **filter
+  def posts_by title = nil, **filter
     data = posts_and_items **filter
     data[:limit] = PAGE_LIMIT
+    data[:page_title] = title if title
     widget Views::Posts, data
   end
 end
