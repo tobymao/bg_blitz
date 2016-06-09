@@ -23,7 +23,7 @@ module Views
       end
 
       div style: post_style do
-        post_path = "/posts/#{post.id}/#{post.title}"
+        post_path = "/posts/#{post.id}/#{CGI.escape post.title}"
         link_style = inline color: 'black', font_weight: 'normal'
 
         a href: post_path, style: link_style do
@@ -34,15 +34,15 @@ module Views
 
         rawtext rendered_text
 
-        more_style = inline(
-          border_top: '1px solid gray',
-          margin_top: '1em',
-          width: '6em',
-        )
+        #more_style = inline(
+        #  border_top: '1px solid gray',
+        #  margin_top: '1em',
+        #  width: '6em',
+        #)
 
-        div style: more_style  do
-          a 'Read More', href: post_path
-        end unless solo
+        #div style: more_style  do
+        #  a 'Read More', href: post_path
+        #end unless solo
 
         render_tags
       end
