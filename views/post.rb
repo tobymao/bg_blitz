@@ -76,7 +76,7 @@ module Views
       div style: inline(margin_top: '1em', line_height: '2em') do
         post.tags.each do |tag|
           div style: inline(display: 'inline-block') do
-            a tag, href: "/tag/#{tag}", style: tag_style
+            a tag, href: "/tag/#{CGI.escape tag}", style: tag_style
           end
         end
       end
