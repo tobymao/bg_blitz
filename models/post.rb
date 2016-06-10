@@ -24,6 +24,14 @@ class Post < Base
       .strip
   end
 
+  def slug
+    title.parameterize
+  end
+
+  def path
+    "/posts/#{id}/#{slug}"
+  end
+
   def validate
     super
     validates_presence [:title, :text, :description]

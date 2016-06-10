@@ -77,9 +77,18 @@ class BGBlitz < Roda
 
     r.on 'posts/:id' do |id|
       post = Post[id]
-      items = Item.where id: post.item_ids.uniq
-      data = { posts: [post], items: items.all, page_title: post.title, solo: true }
-      widget Views::Posts, data
+
+      r.is do
+        r.redirect post.path
+      end
+
+      r.on ':name' do |name|
+        r.redirect post.path unless name == post.slug
+
+        items = Item.where id: post.item_ids.uniq
+        data = { posts: [post], items: items.all, page_title: post.title, solo: true }
+        widget Views::Posts, data
+      end
     end
 
     r.on 'tag/:tag' do |tag|

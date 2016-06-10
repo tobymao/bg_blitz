@@ -23,10 +23,9 @@ module Views
       end
 
       div style: post_style do
-        post_path = "/posts/#{post.id}/#{CGI.escape post.title}"
         link_style = inline color: 'black', font_weight: 'normal'
 
-        a href: post_path, style: link_style do
+        a href: post.path, style: link_style do
           h1 post.title
         end
 

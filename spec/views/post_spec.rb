@@ -7,6 +7,7 @@ describe Views::Post do
       id: 1,
       map_text: '',
       title: '',
+      path: '/posts/1/test',
       pp_created_at: '',
       tags: [],
     )
