@@ -34,12 +34,23 @@ class Post < Base
 
   def validate
     super
-    validates_presence [:title, :text, :description]
+    validates_presence [:title, :text, :description, :published]
   end
 
   def before_save
     self.tags.map!(&:strip)
     self.tags.reject!(&:empty?)
+
+    if self.published && !self.published_at
+      self.published_at = DateTime.now
+    elsif !published && published_at
+      self.published_at = nil
+    end
+
     super
+  end
+
+  def pp_updated_at
+    updated_at.strftime('%B %-d, %Y')
   end
 end

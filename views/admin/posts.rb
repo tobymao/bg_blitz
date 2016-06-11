@@ -70,6 +70,16 @@ module Views
               end
             end
           end
+          br
+
+          div do
+            a 'Preview Post', href: "/posts/#{post.id}"
+          end if post
+
+          label do
+            text 'Published'
+            input type: 'checkbox', name: 'published', checked: post&.published
+          end
 
           input type: 'hidden', name: 'text', id: 'text_field'
 

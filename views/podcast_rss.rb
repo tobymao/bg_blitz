@@ -52,7 +52,7 @@ module Views
 
         channel_item = RSS::Rss::Channel::Item.new
         channel_item.title = post.title
-        channel_item.pubDate = post.created_at
+        channel_item.pubDate = post.published_at
         channel_item.description = post.description
 
         file_url = SITE_URL + item.file_url
