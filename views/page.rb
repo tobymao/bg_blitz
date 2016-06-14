@@ -118,6 +118,10 @@ module Views
           font-weight: bold;
           color: #{BGB_PURPLE};
         }
+
+        .main img {
+          max-width: #{MOBILE_W};
+        }
       CSS
     end
     static :render_style

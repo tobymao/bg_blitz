@@ -29,7 +29,7 @@ module Views
           h1 post.title
         end
 
-        h2 post.pp_updated_at
+        h2 post.pp_published_at
 
         rawtext rendered_text
 

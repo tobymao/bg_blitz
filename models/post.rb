@@ -50,7 +50,7 @@ class Post < Base
     super
   end
 
-  def pp_updated_at
-    updated_at.strftime('%B %-d, %Y')
+  def pp_published_at
+    published_at&.strftime '%B %-d, %Y'
   end
 end

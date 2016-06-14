@@ -8,7 +8,7 @@ describe Views::Post do
       map_text: '',
       title: '',
       path: '/posts/1/test',
-      pp_updated_at: '',
+      pp_published_at: '',
       tags: [],
     )
   }
