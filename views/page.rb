@@ -113,14 +113,14 @@ module Views
           font-weight: normal;
         }
 
+        .main img {
+          max-width: 100%;
+        }
+
         .main a {
           text-decoration: none;
           font-weight: bold;
           color: #{BGB_PURPLE};
-        }
-
-        .main img {
-          max-width: #{MOBILE_W};
         }
       CSS
     end
