@@ -156,10 +156,11 @@ class BGBlitz < Roda
         r.is method: 'post' do
           params = {
             title: r['title'],
-            text: r['text'].scrub,
+            author: r['author'],
+            text: r['text'],
             type: r['type'],
             tags: r['tags'].split(','),
-            description: r['description'].scrub,
+            description: r['description'],
             published: !!r['published'],
           }
 

@@ -22,6 +22,7 @@ module Views
           render_analytics
           meta name: 'viewport', content: 'width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=0'
           meta name: 'apple-mobile-web-app-capable', content: 'yes'
+          meta charset: 'UTF-8'
         end
 
         div style: inline(min_height: '95%') do
@@ -67,7 +68,7 @@ module Views
         h2 {
           font-weight: bold;
           font-size: 0.8em;
-          margin-bottom: 1em;
+          margin-bottom: 0.3em;
         }
 
         i { font-style: italic; }

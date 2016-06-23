@@ -40,6 +40,10 @@ module Views
 
         h2 post.pp_published_at
 
+        div style: inline(font_style: 'italic', font_size: '0.8em', margin_bottom: '0.7em') do
+          text "by #{post.author}" if post.author
+        end
+
         rawtext rendered_text
 
         more_style = inline(

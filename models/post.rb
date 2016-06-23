@@ -38,8 +38,9 @@ class Post < Base
   end
 
   def before_save
-    self.tags.map!(&:strip)
-    self.tags.reject!(&:empty?)
+    self.tags.map! &:strip
+    self.tags.reject! &:empty?
+    self.author = nil if self.author.to_s == ''
 
     if self.published && !self.published_at
       self.published_at = DateTime.now

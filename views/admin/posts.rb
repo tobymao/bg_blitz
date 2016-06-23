@@ -49,6 +49,9 @@ module Views
           input type: 'text', name: 'title', placeholder: 'Title', value: post&.title
           br
 
+          input type: 'text', name: 'author', placeholder: 'Author', value: post&.author
+          br
+
           textarea name: 'description', form: 'form', placeholder: 'Description'do
             text post&.description
           end

@@ -5,6 +5,7 @@ describe Views::Post do
     instance_double(
       'Post',
       id: 1,
+      author: 'Ambie',
       map_text: '',
       title: '',
       path: '/posts/1/test',
