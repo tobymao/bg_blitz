@@ -6,6 +6,9 @@ module Views
     needs :item_hash
     needs solo: false
 
+    LIMIT = 10
+    DIV = '</div>'
+
     def content
       style_hash = {
         text_align: 'left',
@@ -22,6 +25,12 @@ module Views
         render_item item_hash[id]
       end
 
+      truncated =
+        unless solo
+          parts = rendered_text.split DIV
+          rendered_text = parts.take(LIMIT).map { |l| l << DIV }.join if parts.size > LIMIT
+        end
+
       div style: post_style do
         link_style = inline color: 'black', font_weight: 'normal'
 
@@ -33,15 +42,15 @@ module Views
 
         rawtext rendered_text
 
-        #more_style = inline(
-        #  border_top: '1px solid gray',
-        #  margin_top: '1em',
-        #  width: '6em',
-        #)
+        more_style = inline(
+          border_top: '1px solid gray',
+          margin_top: '1em',
+          width: '6em',
+        )
 
-        #div style: more_style  do
-        #  a 'Read More', href: post_path
-        #end unless solo
+        div style: more_style  do
+          a 'Read More', href: post.path
+        end if truncated
 
         render_tags
       end
@@ -81,6 +90,8 @@ module Views
         end
       end
     end
-  end
 
+    def truncate rendered_text
+    end
+  end
 end
