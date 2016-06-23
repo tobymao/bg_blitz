@@ -6,8 +6,8 @@ module Views
     needs :item_hash
     needs solo: false
 
-    LIMIT = 10
-    DIV = '</div>'
+    LIMIT = 7
+    DIV   = '</div>'
 
     def content
       style_hash = {
