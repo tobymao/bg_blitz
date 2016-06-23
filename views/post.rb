@@ -6,7 +6,7 @@ module Views
     needs :item_hash
     needs solo: false
 
-    LIMIT = 7
+    LIMIT = 5
     DIV   = '</div>'
 
     def content
