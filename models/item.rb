@@ -8,10 +8,6 @@ class Item < Base
     db_schema[:type][:enum_values]
   end
 
-  def slug
-    title.parameterize
-  end
-
   def itunes_duration
     return unless self.type == 'audio'
     seconds = file.metadata['duration']
