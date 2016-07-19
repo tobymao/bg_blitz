@@ -64,9 +64,7 @@ module Views
             position: 'absolute',
           )
 
-          unless solo
-            a 'Comments', href: "#{page_url}#disqus_thread", style: comments_style
-          end
+          a href: "#{page_url}#disqus_thread", style: comments_style unless solo
         end
 
         render_tags

@@ -24,12 +24,11 @@ module Views
           widget Views::Post, post: p, item_hash: item_hash, solo: solo
         end
       end
-
-      script id: 'dsq-count-scr', src: '//boardgameblitz.disqus.com/count.js', async: true
     end
 
     def render_footer
       widget Pager, more: posts.size > limit
+      script id: 'dsq-count-scr', src: '//boardgameblitz.disqus.com/count.js', async: true
       super
     end
 
