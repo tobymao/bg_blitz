@@ -46,17 +46,26 @@ module Views
 
         rawtext rendered_text
 
-        more_style = inline(
-          border_top: '1px solid gray',
-          margin_top: '1em',
-          width: '6em',
-        )
+        div style: inline(position: 'relative') do
+          more_style = inline(
+            border_top: '1px solid gray',
+            margin_top: '1em',
+            width: '6em',
+            display: 'inline-block',
+          )
 
-        div style: more_style  do
-          a 'Read More', href: post.path
-        end if truncated
+          div style: more_style  do
+            a 'Read More', href: post.path
+          end if truncated
+
+          comments_style = inline right: 0, top: '1em', position: 'absolute'
+
+          a 'Comments', href: "#{page_url}#disqus_thread", style: comments_style unless solo
+        end
 
         render_tags
+
+        render_disqus if solo
       end
     end
 
@@ -95,7 +104,37 @@ module Views
       end
     end
 
-    def truncate rendered_text
+    def render_disqus
+      div id: 'disqus_thread', style: inline(margin_top: '1em')
+
+      script <<~JS
+        var disqus_config = function () {
+          this.page.url = '#{page_url}';
+          this.page.identifier = '#{identifier}';
+        };
+        (function() {
+         var d = document, s = d.createElement('script');
+         s.src = '//boardgameblitz.disqus.com/embed.js';
+         s.setAttribute('data-timestamp', +new Date());
+         (d.head || d.body).appendChild(s);
+        })();
+      JS
+
+      noscript do
+        span 'Please enable JavaScript to view the '
+        a href: 'https://disqus.com/?ref_noscript', rel: 'nofollow' do
+          text 'comments powered by Disqus.'
+        end
+      end
+    end
+
+    # TODO don't hardcode this url
+    def page_url
+      "http://boardgameblitz.com#{identifier}"
+    end
+
+    def identifier
+      post.path
     end
   end
 end
