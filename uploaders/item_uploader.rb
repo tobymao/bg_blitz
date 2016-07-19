@@ -26,4 +26,12 @@ class ItemUploader < Shrine
     io.rewind
     duration
   end
+
+  def generate_location(io, context)
+    if record = context[:record]
+      super.rpartition('.').insert(1, "/#{record.slug}").join
+    else
+      super
+    end
+  end
 end
