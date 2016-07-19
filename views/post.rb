@@ -58,9 +58,15 @@ module Views
             a 'Read More', href: post.path
           end if truncated
 
-          comments_style = inline right: 0, top: '1em', position: 'absolute'
+          comments_style = inline(
+            right: 0,
+            top: '1em',
+            position: 'absolute',
+          )
 
-          a 'Comments', href: "#{page_url}#disqus_thread", style: comments_style unless solo
+          unless solo
+            a 'Comments', href: "#{page_url}#disqus_thread", style: comments_style
+          end
         end
 
         render_tags
