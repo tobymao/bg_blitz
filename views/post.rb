@@ -68,8 +68,10 @@ module Views
         end
 
         render_tags
-
-        render_disqus if solo
+        if solo
+          render_social
+          render_disqus
+        end
       end
     end
 
@@ -108,6 +110,38 @@ module Views
       end
     end
 
+    def render_social
+      share_style = inline(
+        border_bottom: '1px solid gray',
+        margin_top: '1.5em',
+        display: 'inline-block',
+        vertical_align: 'bottom',
+        width: '3em',
+      )
+
+      div style: share_style do
+        text 'Share:'
+      end
+
+      facebook_url = URI.encode "https://www.facebook.com/sharer.php?u=#{page_url}"
+      social_button facebook_url, 'Share on Facebook', '/images/facebook.png'
+
+      reddit_url = URI.encode "https://reddit.com/submit?url=#{page_url}&title=#{post.title}"
+      social_button reddit_url, 'Share on Facebook', '/images/reddit.png'
+
+      twitter_url = URI.encode "https://twitter.com/intent/tweet?source=#{page_url}&text=#{post.title}: #{page_url}"
+      social_button twitter_url, 'Tweet', '/images/twitter.png'
+    end
+
+    def social_button url, title, image_url
+      button_style = inline(
+        margin_left: '0.3em',
+      )
+      a href: url, target: '_blank', title: title, style: button_style do
+        img src: image_url, style: inline(height: '1.5em')
+      end
+    end
+
     def render_disqus
       div id: 'disqus_thread', style: inline(margin_top: '1em')
 
@@ -117,10 +151,10 @@ module Views
           this.page.identifier = '#{identifier}';
         };
         (function() {
-         var d = document, s = d.createElement('script');
-         s.src = '//boardgameblitz.disqus.com/embed.js';
-         s.setAttribute('data-timestamp', +new Date());
-         (d.head || d.body).appendChild(s);
+          var d = document, s = d.createElement('script');
+          s.src = '//boardgameblitz.disqus.com/embed.js';
+          s.setAttribute('data-timestamp', +new Date());
+          (d.head || d.body).appendChild(s);
         })();
       JS
 
