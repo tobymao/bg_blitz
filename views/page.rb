@@ -2,6 +2,8 @@ require './views/base'
 
 module Views
   class Page < Base
+    needs page_title: nil
+
     DEFAULT_LINKS = [
       ['Home', '/'],
       ['Podcasts', '/podcasts'],
@@ -47,9 +49,6 @@ module Views
       else
         title 'Board Game Blitz'
       end
-    end
-
-    def page_title
     end
 
     def render_style

@@ -190,11 +190,10 @@ class BGBlitz < Roda
   # instead of counting the database
   # we fetch +1 to see if there's more
   def paginate klass, force = true
-    page = request['page'].to_i
-    page = 1 if page == 0
+    order_by = klass.columns.include?(:published_at) ? :published_at : :id
 
     dataset = klass
-      .reverse_order(:id)
+      .reverse_order(order_by)
       .limit(PAGE_LIMIT + 1)
       .offset((page - 1) * PAGE_LIMIT)
 
@@ -214,9 +213,16 @@ class BGBlitz < Roda
   end
 
   def posts_by title = nil, **filter
+    title = [title, "Page #{page}"].compact.join ' | ' if page > 1
+
     data = posts_and_items **filter
     data[:limit] = PAGE_LIMIT
-    data[:page_title] = title if title
+    data[:page_title] = title
     widget Views::Posts, data
+  end
+
+  def page
+    p = request['page'].to_i
+    p <= 0 ? 1 : p
   end
 end
