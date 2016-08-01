@@ -28,16 +28,9 @@ class ItemUploader < Shrine
   end
 
   def generate_location(io, context)
-    if item = context[:record]
-      file = item.file
-      name = remove_ext file.original_filename
-      "#{remove_ext super}/#{name.parameterize}.#{file.extension}"
-    else
-      super
-    end
-  end
-
-  def remove_ext str
-    str.rpartition('.')[0]
+    parts = context[:metadata]['filename'].rpartition '.'
+    name = parts[0].parameterize
+    ext = parts[2]
+    "#{generate_uid io}/#{name}.#{ext}"
   end
 end
