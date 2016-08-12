@@ -3,9 +3,10 @@ require 'rss/itunes'
 
 module Views
   module PodcastRSS
-    NAME      = 'Board Game Blitz'.freeze
-    SITE_URL  = 'http://www.boardgameblitz.com'.freeze
-    IMAGE_URL = SITE_URL + '/images/logo_itunes.jpg'.freeze
+    DESCRIPTION = 'Board Game Blitz is a 30 minute bi-weekly podcast about modern board games and card games hosted by Ambie, Cassadi, and Crystal.'.freeze
+    NAME        = 'Board Game Blitz'.freeze
+    SITE_URL    = 'http://www.boardgameblitz.com'.freeze
+    IMAGE_URL   = SITE_URL + '/images/logo_itunes.jpg'.freeze
 
     def self.rss posts:, items:
       rss = RSS::Rss.new '2.0'
@@ -17,7 +18,7 @@ module Views
       channel.itunes_categories << parent_category
 
       channel.title = NAME
-      channel.description = 'A shorter (30 minute) podcast covering a wide variety of games.'
+      channel.description = DESCRIPTION
       channel.link = SITE_URL
       channel.language = 'en-us'
       channel.copyright = "Copyright #{Date.today.year} Board Game Blitz"
@@ -35,7 +36,7 @@ module Views
 
       channel.itunes_keywords = %w[boardgame board game games gaming cardboard bgg blitz tabletop]
       channel.itunes_subtitle = 'Podcasts on the go!'
-      channel.itunes_summary = 'Ambie, Cassadi, and Crystal discussing various topics about board games'
+      channel.itunes_summary = DESCRIPTION
 
       # below is what iTunes uses for your "album art", different from RSS standard
       channel.itunes_image = RSS::ITunesChannelModel::ITunesImage.new IMAGE_URL

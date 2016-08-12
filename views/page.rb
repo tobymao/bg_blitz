@@ -48,6 +48,7 @@ module Views
         title "#{page_title} | Board Game Blitz"
       else
         title 'Board Game Blitz'
+        meta name: 'description', content: 'Board Game Blitz is a bi-weekly podcast and video series about modern board games and card games hosted by Ambie, Cassadi, and Crystal.'
       end
     end
 
