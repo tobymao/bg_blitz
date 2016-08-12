@@ -5,6 +5,7 @@ module Views
     def render_main
       ambie_icons = [
         Icons::Icon.new('bgg', 'https://boardgamegeek.com/user/ambierona', 'BGG'),
+        Icons::Icon.new('twitter', 'https://twitter.com/ambierona', 'Twitter'),
         Icons::Icon.new('youtube', 'https://www.youtube.com/ambierona', 'Youtube'),
       ]
 
