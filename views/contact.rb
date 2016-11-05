@@ -18,6 +18,9 @@ module Views
         text 'Twitter: '
         a '@bgameblitz', href: 'https://twitter.com/bgameblitz', target: 'blank'
         br
+        text 'Instagram: '
+        a '@boardgameblitz', href: 'https://www.instagram.com/boardgameblitz/', target: 'blank'
+        br
         text 'Facebook: '
         a 'BGBlitz', href: 'https://www.facebook.com/BGBlitz/', target: 'blank'
         br
