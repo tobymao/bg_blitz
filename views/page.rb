@@ -71,6 +71,8 @@ module Views
           margin-bottom: 0.3em;
         }
 
+        b { font-weight: bold; }
+
         i { font-style: italic; }
 
         .bgb_container {
