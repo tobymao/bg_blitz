@@ -106,7 +106,7 @@ class BGBlitz < Roda
 
     r.is 'rss.xml' do
       response.headers['content-type'] = 'text/xml'
-      data = posts_and_items type: 'podcast'
+      data = posts_and_items type: 'podcast', paged: false
       Views::PodcastRSS.rss data
     end
 
@@ -187,21 +187,20 @@ class BGBlitz < Roda
     klass.new(**needs).to_html
   end
 
+  def ordered klass
+    order_by = klass.columns.include?(:published_at) ? :published_at : :id
+    klass.reverse_order(order_by)
+  end
+
   # instead of counting the database
   # we fetch +1 to see if there's more
   def paginate klass, force = true
-    order_by = klass.columns.include?(:published_at) ? :published_at : :id
-
-    dataset = klass
-      .reverse_order(order_by)
-      .limit(PAGE_LIMIT + 1)
-      .offset((page - 1) * PAGE_LIMIT)
-
+    dataset = ordered(klass).limit(PAGE_LIMIT + 1).offset((page - 1) * PAGE_LIMIT)
     force ? dataset.all : dataset
   end
 
-  def posts_and_items type: nil, tags: nil
-    posts = paginate Post, false
+  def posts_and_items type: nil, tags: nil, paged: true
+    posts = paged ? paginate(Post, false) : ordered(Post)
     posts = posts.where published: true
     posts = posts.where type: type if type
     posts = posts.where Sequel.pg_array_op(:tags).contains Array(tags) if tags
