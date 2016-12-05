@@ -104,6 +104,13 @@ class BGBlitz < Roda
       widget Views::Contact
     end
 
+    r.is 'con' do
+      post = Post[36]
+      items = Item.where id: post.item_ids.uniq
+      data = { posts: [post], items: items.all, page_title: post.title, solo: true }
+      widget Views::Posts, data
+    end
+
     r.is 'rss.xml' do
       response.headers['content-type'] = 'text/xml'
       data = posts_and_items type: 'podcast', paged: false
