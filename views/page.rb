@@ -75,6 +75,11 @@ module Views
 
         i { font-style: italic; }
 
+        ul {
+          list-style-type: disc;
+          list-style-position: inside;
+        }
+
         .bgb_container {
           position: relative;
           padding: 0 5% 0 5%;
