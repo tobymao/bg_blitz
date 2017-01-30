@@ -78,6 +78,7 @@ module Views
         ul {
           list-style-type: disc;
           list-style-position: inside;
+          margin-left: 15px;
         }
 
         .bgb_container {
