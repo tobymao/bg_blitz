@@ -156,8 +156,9 @@ class BGBlitz < Roda
         post = Post[id] if id.to_i > 0
 
         r.get do
+          tags = Post.distinct.select_order_map(Sequel.pg_array_op(:tags).unnest)
           posts = paginate Post
-          widget Views::Admin::Posts, post: post, posts: posts
+          widget Views::Admin::Posts, post: post, posts: posts, tags: tags
         end
 
         r.is method: 'post' do

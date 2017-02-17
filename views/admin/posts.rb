@@ -5,13 +5,16 @@ module Views
     class Posts < Admin::Page
       needs :post
       needs :posts
+      needs :tags
 
       PATH = '/admin/posts'
 
       def render_head
         super
+        script src: 'https://code.jquery.com/jquery-3.1.1.slim.min.js'
         link rel: 'stylesheet', type: 'text/css', href: '/vendor/quill.snow.css'
         script src: '/vendor/quill.min.js'
+        script src: '/vendor/jquery.textcomplete.min.js'
       end
 
       def render_main
@@ -115,6 +118,20 @@ module Views
               event.target.submit();
             },
           };
+
+          $('[name="tags"]').textcomplete([{
+            match: /(\\s*)([^,]*[^,]{2})$/,
+            search: function(term, callback) {
+              var words = ["#{tags.join('", "')}"];
+              callback($.map(words, function (word) {
+                return word.toLowerCase().indexOf(term.toLowerCase()) === 0 ? word : null;
+              }));
+            },
+            replace: function(word) {
+              return word + ' ';
+            }
+          }]);
+
         JS
       end
 
