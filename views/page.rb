@@ -176,11 +176,12 @@ module Views
           color: BGB_PURPLE,
         )
 
-        div do
+        div style: inline(margin: '5px 0 8px 0') do
           a 'About', href: '/about', style: ls
           a 'Contact', href: '/contact', style: ls
           a 'Podcasts', href: '/podcasts', style: ls
           a 'Videos', href: '/videos', style: ls
+          a 'Archives', href: '/archives', style: ls
         end
       end
     end

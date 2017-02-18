@@ -104,11 +104,9 @@ class BGBlitz < Roda
       widget Views::Contact
     end
 
-    r.is 'con' do
-      post = Post[36]
-      items = Item.where id: post.item_ids.uniq
-      data = { posts: [post], items: items.all, page_title: post.title, solo: true }
-      widget Views::Posts, data
+    r.is 'archives' do
+      posts = Post.where(published: true).order(:published_at).reverse
+      widget Views::Archives, posts: posts
     end
 
     r.is 'rss.xml' do

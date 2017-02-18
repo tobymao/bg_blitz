@@ -32,17 +32,17 @@ module Views
           color: white;
           text-decoration: none;
           text-transform: uppercase;
-          width: 35%;
+          width: 90px;
           -webkit-transition: all 0.2s;
           transition: all 0.2s;
         }
 
         @media only screen and (min-width: #{MOBILE_W}) {
-          .nav_link { width: 18%; }
+          .nav_link { width: 100px; }
         }
 
         @media only screen and (min-width: #{TABLET_W}) {
-          .nav_link { width: 8em; }
+          .nav_link { width: 120px; }
         }
       CSS
     end
