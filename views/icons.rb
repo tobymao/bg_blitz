@@ -7,7 +7,7 @@ module Views
     ICONS = [
       Icon.new('rss', '/rss.xml', 'RSS'),
       Icon.new('facebook', 'https://www.facebook.com/BGBlitz', 'Facebook'),
-      Icon.new('twitter', 'https://twitter.com/bgameblitz', 'Twitter'),
+      Icon.new('twitter', 'https://twitter.com/BoardGameBlitz', 'Twitter'),
       Icon.new('google', 'https://plus.google.com/+boardgameblitz', 'Google', true),
       Icon.new('youtube', 'https://www.youtube.com/c/boardgameblitz', 'YouTube'),
       Icon.new('itunes', 'https://itunes.apple.com/us/podcast/board-game-blitz/id1117729882?mt=2', 'iTunes'),
