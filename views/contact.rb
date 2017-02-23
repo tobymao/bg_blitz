@@ -16,7 +16,7 @@ module Views
         a 'boardgameblitz@gmail.com', href: 'mailto:boardgameblitz@gmail.com'
         br
         text 'Twitter: '
-        a '@bgameblitz', href: 'https://twitter.com/bgameblitz', target: 'blank'
+        a '@bgameblitz', href: 'https://twitter.com/BoardGameBlitz', target: 'blank'
         br
         text 'Instagram: '
         a '@boardgameblitz', href: 'https://www.instagram.com/boardgameblitz/', target: 'blank'
