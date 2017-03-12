@@ -10,7 +10,7 @@ describe BGBlitz do
   end
 
   describe 'get requests' do
-    %w[/ /podcasts /videos /blog /about /contact /rss.xml].each do |path|
+    %w[/ /podcasts /videos /blog /about /archives /contact /rss.xml].each do |path|
       it "#{path} should return 200" do
         get path
         expect(last_response).to be_ok
