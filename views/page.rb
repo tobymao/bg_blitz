@@ -9,8 +9,8 @@ module Views
       ['Podcasts', '/podcasts'],
       ['Videos', '/videos'],
       ['Blog', '/blog'],
-      ['About Us', '/about'],
-      ['Contact', '/contact'],
+      ['About', '/about'],
+      ['Support Us', '/support'],
     ].freeze
 
     def content
@@ -177,10 +177,11 @@ module Views
         )
 
         div style: inline(margin: '5px 0 8px 0') do
-          a 'About', href: '/about', style: ls
-          a 'Contact', href: '/contact', style: ls
           a 'Podcasts', href: '/podcasts', style: ls
           a 'Videos', href: '/videos', style: ls
+          a 'Blog', href: '/blog', style: ls
+          a 'About', href: '/about', style: ls
+          a 'Support Us', href: '/support', style: ls
           a 'Archives', href: '/archives', style: ls
         end
       end

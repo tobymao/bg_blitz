@@ -3,6 +3,8 @@ require './views/page'
 module Views
   class About < Page
     def render_main
+      render_contact
+
       ambie_icons = [
         Icons::Icon.new('bgg', 'https://boardgamegeek.com/user/ambierona', 'BGG'),
         Icons::Icon.new('twitter', 'https://twitter.com/ambierona', 'Twitter'),
@@ -10,6 +12,10 @@ module Views
       ]
 
       text_style = inline line_height: '1.3em'
+
+      div style: text_style do
+        text "Board Game Blitz is a bi-weekly podcast and video series about modern board games and card games hosted by Ambie, Cassadi, and Crystal."
+      end
 
       render_box 'Ambie', BGB_BLUE, ambie_icons, 137, 103
 
@@ -54,6 +60,32 @@ module Views
       end
     end
     static :render_main
+
+    def render_contact
+      container_style = inline(
+        margin: '2em 0 2em 0',
+        line_height: '1.5em',
+        text_align: 'center',
+      )
+
+      div style: container_style do
+        h1 'Contact Us'
+        text 'Email: '
+        a 'boardgameblitz@gmail.com', href: 'mailto:boardgameblitz@gmail.com'
+        br
+        text 'Twitter: '
+        a '@BoardGameBlitz', href: 'https://twitter.com/BoardGameBlitz', target: 'blank'
+        br
+        text 'Instagram: '
+        a '@boardgameblitz', href: 'https://www.instagram.com/boardgameblitz/', target: 'blank'
+        br
+        text 'Facebook: '
+        a 'BGBlitz', href: 'https://www.facebook.com/BGBlitz/', target: 'blank'
+        br
+        text 'BoardGameGeek Guild: '
+        a 'Board Game Blitz', href: 'https://www.boardgamegeek.com/guild/2581', target: 'blank'
+      end
+    end
 
     def page_title
       'About'

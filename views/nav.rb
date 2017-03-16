@@ -32,7 +32,7 @@ module Views
           color: white;
           text-decoration: none;
           text-transform: uppercase;
-          width: 90px;
+          width: 100px;
           -webkit-transition: all 0.2s;
           transition: all 0.2s;
         }

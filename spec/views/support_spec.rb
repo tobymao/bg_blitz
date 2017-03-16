@@ -1,8 +1,8 @@
 require './spec/spec_helper'
 
-describe Views::Contact do
+describe Views::Support do
   it 'should render' do
-    view = Views::Contact.new
+    view = Views::Support.new
     expect(view.to_html).not_to be_nil
   end
 end

@@ -100,8 +100,8 @@ class BGBlitz < Roda
       widget Views::About
     end
 
-    r.is 'contact' do
-      widget Views::Contact
+    r.is 'support' do
+      widget Views::Support
     end
 
     r.is 'archives' do
