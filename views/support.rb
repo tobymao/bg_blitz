@@ -2,6 +2,24 @@ require './views/page'
 
 module Views
   class Support < Page
+    SUPPORTERS = [
+      'Adrienne Dong',
+      'Andrew Wilson',
+      "Ben O'Steen",
+      'Chris Mitchel',
+      'Chris Sasaki',
+      'Clay Crucible Games',
+      'Flip the Table',
+      'Gary Franczyk',
+      'Jacob Shockcor',
+      'Mason Weaver',
+      'Megan Bealmer',
+      'Merely Rachel',
+      'Mike Risley',
+      'Nicholas Baker',
+      'Voltaire Jayme',
+    ].sort.freeze
+
     def render_main
       container_style = inline(
         margin: '2em 0 2em 0',
@@ -18,6 +36,12 @@ module Views
 
         h1 style: inline(margin: '20px 0 20px 0', font_size: '25px') do
           text 'Thanks To Our Current Patrons'
+        end
+
+        SUPPORTERS.each do |name|
+          div do
+            text name
+          end
         end
       end
     end
