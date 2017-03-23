@@ -17,6 +17,7 @@ module Views
       'Merely Rachel',
       'Mike Risley',
       'Nicholas Baker',
+      'Rafael Cordero',
       'Voltaire Jayme',
     ].sort.freeze
 
