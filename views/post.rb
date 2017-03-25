@@ -127,7 +127,7 @@ module Views
       social_button facebook_url, 'Share on Facebook', '/images/facebook.png'
 
       reddit_url = URI.encode "https://reddit.com/submit?url=#{page_url}&title=#{post.title}"
-      social_button reddit_url, 'Share on Facebook', '/images/reddit.png'
+      social_button reddit_url, 'Share on Reddit', '/images/reddit.png'
 
       twitter_url = URI.encode "https://twitter.com/intent/tweet?source=#{page_url}&text=#{post.title}: #{page_url}"
       social_button twitter_url, 'Tweet', '/images/twitter.png'
