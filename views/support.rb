@@ -12,12 +12,14 @@ module Views
       'Flip the Table',
       'Gary Franczyk',
       'Jacob Shockcor',
+      'Jonny Jimison',
       'Mason Weaver',
       'Megan Bealmer',
       'Merely Rachel',
       'Mike Risley',
       'Nicholas Baker',
       'Rafael Cordero',
+      'Robert Oswald',
       'Voltaire Jayme',
     ].sort.freeze
 
