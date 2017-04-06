@@ -9,6 +9,7 @@ module Views
       'Chris Mitchel',
       'Chris Sasaki',
       'Clay Crucible Games',
+      'Eric & Amber Davila',
       'Flip the Table',
       'Gary Franczyk',
       'Jacob Shockcor',
@@ -19,6 +20,7 @@ module Views
       'Mike Risley',
       'Nicholas Baker',
       'Rafael Cordero',
+      'Ray Slakinski',
       'Robert Oswald',
       'Voltaire Jayme',
     ].sort.freeze
