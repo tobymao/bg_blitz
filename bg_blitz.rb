@@ -104,6 +104,10 @@ class BGBlitz < Roda
       widget Views::Support
     end
 
+    r.is 'store' do
+      widget Views::Store
+    end
+
     r.is 'archives' do
       posts = Post.where(published: true).order(:published_at).reverse
       widget Views::Archives, posts: posts

@@ -10,6 +10,7 @@ module Views
       'Chris Sasaki',
       'Clay Crucible Games',
       'Eric & Amber Davila',
+      'Erik Vasu-Sarver',
       'Flip the Table',
       'Gary Franczyk',
       'Jacob Shockcor',

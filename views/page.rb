@@ -6,11 +6,10 @@ module Views
 
     DEFAULT_LINKS = [
       ['Home', '/'],
-      ['Podcasts', '/podcasts'],
-      ['Videos', '/videos'],
-      ['Blog', '/blog'],
+      ['Content ▾', [['Podcasts', '/podcasts'], ['Videos', '/videos'], ['Blog', '/blog']]],
       ['About', '/about'],
       ['Support Us', '/support'],
+      ['Store', '/store'],
     ].freeze
 
     def content
@@ -182,6 +181,7 @@ module Views
           a 'Blog', href: '/blog', style: ls
           a 'About', href: '/about', style: ls
           a 'Support Us', href: '/support', style: ls
+          a 'Store', href: '/store', style: ls
           a 'Archives', href: '/archives', style: ls
         end
       end
