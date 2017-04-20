@@ -4,6 +4,7 @@ module Views
   class Support < Page
     SUPPORTERS = [
       'Adrienne Dong',
+      'Alan Skinner',
       'Andrew Wilson',
       "Ben O'Steen",
       'Chris Mitchel',
