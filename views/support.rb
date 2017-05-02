@@ -16,6 +16,7 @@ module Views
       'Gary Franczyk',
       'Jacob Shockcor',
       'Jonny Jimison',
+      'Larry Nehring',
       'Mason Weaver',
       'Megan Bealmer',
       'Merely Rachel',
