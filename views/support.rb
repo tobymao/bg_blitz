@@ -23,6 +23,7 @@ module Views
       'Mike Risley',
       'Nicholas Baker',
       'Rafael Cordero',
+      'Rattlebox Games',
       'Ray Slakinski',
       'Robert Oswald',
       'Voltaire Jayme',
