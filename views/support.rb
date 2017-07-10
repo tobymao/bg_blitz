@@ -3,6 +3,7 @@ require './views/page'
 module Views
   class Support < Page
     SUPPORTERS = [
+      'Adam Reeve',
       'Adrienne Dong',
       'Alan Skinner',
       'Andrew Wilson',
