@@ -1,8 +1,8 @@
 require './spec/spec_helper'
 
-describe Views::Store do
+describe Views::Con do
   it 'should render' do
-    view = Views::Store.new
+    view = Views::Con.new
     expect(view.to_html).not_to be_nil
   end
 end

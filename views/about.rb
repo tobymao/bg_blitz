@@ -59,7 +59,6 @@ module Views
           "Stories. She'll tell you she hates euro games, but she's willing to give any game a shot if it's with the right group."
       end
     end
-    static :render_main
 
     def render_contact
       container_style = inline(
@@ -92,26 +91,11 @@ module Views
     end
 
     def render_box name, color, icons, x, y
-      box_style = inline(
-        display: 'inline-block',
-        color: 'white',
-        width: '7em',
-        font_size: '150%',
-        margin: '.5em 0 .5em 0',
-        text_transform: 'uppercase',
-        text_align: 'center',
-        vertical_align: 'top',
-        background_color: color,
-        padding: '.2em 0 .2em 0',
-      )
-
       style Icons.icons_css(name, Icons::ICONS, x, y, 30)
 
-      div style: box_style do
-        text name
-      end
+      widget Box, name: name, style: { background_color: color }
 
-      ul style: inline(display: 'inline-block', margin_top: '4px') do
+      ul style: inline(display: 'inline-block') do
         icons.each do |data|
           li class: "icon #{data.klass} #{name}" do
             a href: data.url, tooltip: data.name

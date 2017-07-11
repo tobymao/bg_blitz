@@ -104,8 +104,8 @@ class BGBlitz < Roda
       widget Views::Support
     end
 
-    r.is 'store' do
-      widget Views::Store
+    r.is 'con' do
+      widget Views::Con
     end
 
     r.is 'archives' do
