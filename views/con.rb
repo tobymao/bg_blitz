@@ -10,7 +10,7 @@ module Views
       )
 
       div style: container_style do
-        img src: '/images/blitz_con.png', style: inline(width: '100%', min_width: '320px', margin: '5px')
+        img src: '/images/blitz_con.jpg', style: inline(width: '100%', min_width: '320px', margin: '5px')
 
         p style: inline(margin: '20px 0', text_align: 'justify') do
           text 'Join us for our second year of Blitz Con! Blitz Con is a small convention in the San Francisco Bay Area geared towards open gaming. We encourage everybody to bring their own games, but we are working on growing a small '
