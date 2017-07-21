@@ -8,6 +8,7 @@ module Views
       'Alan Skinner',
       'Andrew Wilson',
       "Ben O'Steen",
+      'Bill Simoni',
       'Chris Mitchel',
       'Chris Sasaki',
       'Clay Crucible Games',
@@ -28,6 +29,7 @@ module Views
       'Ray Slakinski',
       'Robert Oswald',
       'Voltaire Jayme',
+      'Winter Blair',
     ].sort.freeze
 
     def render_main
