@@ -16,6 +16,7 @@ module Views
       'Erik Vasu-Sarver',
       'Flip the Table',
       'Gary Franczyk',
+      'Hammond Buckland',
       'Jacob Shockcor',
       'Jonny Jimison',
       'Larry Nehring',
