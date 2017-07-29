@@ -12,6 +12,7 @@ module Views
       'Bill Simoni',
       'Chris Mitchel',
       'Chris Sasaki',
+      'Chris Toth',
       'Clay Crucible Games',
       'Eric & Amber Davila',
       'Erik Vasu-Sarver',
