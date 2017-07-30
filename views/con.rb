@@ -28,7 +28,8 @@ module Views
           widget Box, name: 'TICKETS', style: { background_color: BGB_PURPLE }
 
           p do
-            text 'Blitz Con is currently invite only. To get an invite, please email us at boardgameblitzcon@gmail.com'
+            text 'Tickets are on sale through '
+            a 'Eventbrite.', href: 'https://www.eventbrite.com/e/board-game-blitz-con-2018-tickets-35101438347?aff=moreinfo'
           end
         end
 
