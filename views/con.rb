@@ -40,7 +40,7 @@ module Views
           p { text '1333 Old Bayshore Hwy' }
           p { text 'Burlingame, CA 94010' }
           br
-          p { text 'We’ve reserved a block of rooms at the hotel, details are still being finalized.'}
+          p { a 'Hotel block reservations.', href: 'https://aws.passkey.com/event/49232279/owner/4566/landing?gtid=ddfcfaac7d1c08f2abb050e9f3b521a6' }
         end
 
         div do
