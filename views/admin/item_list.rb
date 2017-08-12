@@ -17,7 +17,6 @@ module Views
             li do
               span item.id, style: item_style
               span item.title, style: item_style
-              span item.created_at, style: item_style
 
               url = "#{path}/#{item.id}"
               a 'edit', href: url, style: item_style

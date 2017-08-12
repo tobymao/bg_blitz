@@ -2,6 +2,11 @@ require './models/base'
 
 class Post < Base
   ITEM_REGEX = /{{(.*?)}}/
+  dataset_module do
+    def published
+      where { published_at <= Time.now }
+    end
+  end
 
   def self.types
     db_schema[:type][:enum_values]
@@ -34,19 +39,14 @@ class Post < Base
 
   def validate
     super
-    validates_presence [:title, :text, :description, :published]
+    validates_presence [:title, :text, :description]
   end
 
   def before_save
     self.tags.map! &:strip
     self.tags.reject! &:empty?
-    self.author = nil if self.author.to_s == ''
-
-    if self.published && !self.published_at
-      self.published_at = DateTime.now
-    elsif !published && published_at
-      self.published_at = nil
-    end
+    self.author = nil if self.author.blank?
+    self.published_at = nil if self.published_at.blank?
 
     super
   end

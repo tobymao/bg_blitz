@@ -13,8 +13,10 @@ module Views
         super
         script src: 'https://code.jquery.com/jquery-3.1.1.slim.min.js'
         link rel: 'stylesheet', type: 'text/css', href: '/vendor/quill.snow.css'
+        link rel: 'stylesheet', type: 'text/css', href: '/vendor/datetimepicker.css'
         script src: '/vendor/quill.min.js'
         script src: '/vendor/jquery.textcomplete.min.js'
+        script src: '/vendor/datetimepicker.min.js'
       end
 
       def render_main
@@ -83,8 +85,12 @@ module Views
           end if post
 
           label do
-            text 'Published'
-            input type: 'checkbox', name: 'published', checked: post&.published
+            if post&.published_at.blank?
+              div 'Publish not published'
+            else
+              div 'Post is published on'
+            end
+            input type: 'text', class: 'date_time_picker', name: 'published_at'
           end
 
           input type: 'hidden', name: 'text', id: 'text_field'
@@ -132,6 +138,16 @@ module Views
             }
           }]);
 
+          new DateTimePicker('.date_time_picker', {
+            timePicker: true,
+            timePickerOnly: false,
+            timePickerFormat:24,
+            yearPicker: true,
+            format: "Y/m/d H:i:00 \\\\P\\\\T",
+            minuteIncrement: 1,
+            allowEmpty: true,
+            startDate: #{post ? (post.published_at.to_i * 1000) : 'null'},
+          })
         JS
       end
 

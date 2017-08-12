@@ -109,7 +109,7 @@ class BGBlitz < Roda
     end
 
     r.is 'archives' do
-      posts = Post.where(published: true).order(:published_at).reverse
+      posts = ordered(Post).published.all
       widget Views::Archives, posts: posts
     end
 
@@ -145,7 +145,7 @@ class BGBlitz < Roda
             item = Item.create params
           end
 
-          r.redirect "/admin/items/#{id}"
+          rnow.redirect "/admin/items/#{id}"
         end
 
         r.is 'delete', method: 'post' do
@@ -171,7 +171,7 @@ class BGBlitz < Roda
             type: r['type'],
             tags: r['tags'].split(','),
             description: r['description'],
-            published: !!r['published'],
+            published_at: r['published_at'],
           }
 
           if post
@@ -211,10 +211,9 @@ class BGBlitz < Roda
 
   def posts_and_items type: nil, tags: nil, paged: true
     posts = paged ? paginate(Post, false) : ordered(Post)
-    posts = posts.where published: true
     posts = posts.where type: type if type
     posts = posts.where Sequel.pg_array_op(:tags).contains Array(tags) if tags
-    posts = posts.all
+    posts = posts.published.all
 
     item_ids = posts.flat_map &:item_ids
     items = Item.where id: item_ids.uniq
