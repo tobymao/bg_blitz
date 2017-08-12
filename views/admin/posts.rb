@@ -86,7 +86,7 @@ module Views
 
           label do
             if post&.published_at.blank?
-              div 'Publish not published'
+              div 'Post not published'
             else
               div 'Post is published on'
             end
