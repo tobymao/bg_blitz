@@ -145,7 +145,7 @@ class BGBlitz < Roda
             item = Item.create params
           end
 
-          rnow.redirect "/admin/items/#{id}"
+          r.redirect "/admin/items/#{id}"
         end
 
         r.is 'delete', method: 'post' do
