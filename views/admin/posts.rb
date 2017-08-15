@@ -143,7 +143,7 @@ module Views
             timePickerOnly: false,
             timePickerFormat:24,
             yearPicker: true,
-            format: "Y/m/d H:i:00 \\\\P\\\\T",
+            format: "Y-m-d H:i:00 \\\\P\\\\T",
             minuteIncrement: 1,
             allowEmpty: true,
             startDate: #{post ? (post.published_at.to_i * 1000) : 'null'},
