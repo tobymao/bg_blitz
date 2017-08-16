@@ -24,6 +24,7 @@ module Views
       'Jacob Shockcor',
       'Jesse Metcalf',
       'Jonny Jimison',
+      'Joshua Lee',
       'Larry Nehring',
       'Mason Weaver',
       'Megan Bealmer',
