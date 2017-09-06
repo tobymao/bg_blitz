@@ -75,14 +75,14 @@ class BGBlitz < Roda
       posts_by 'Blog', type: 'blog'
     end
 
-    r.on 'posts/:id' do |id|
+    r.on 'posts', Integer do |id|
       post = Post[id]
 
       r.is do
         r.redirect post.path
       end
 
-      r.on ':name' do |name|
+      r.on String do |name|
         r.redirect post.path unless name == post.slug
 
         items = Item.where id: post.item_ids.uniq
@@ -91,7 +91,7 @@ class BGBlitz < Roda
       end
     end
 
-    r.on 'tag/:tag' do |tag|
+    r.on 'tag', String do |tag|
       clean_tag = CGI.unescape(tag)
       posts_by clean_tag, tags: clean_tag
     end
@@ -124,7 +124,7 @@ class BGBlitz < Roda
         [user, pass] == [ENV['AUTH_USER'], ENV['AUTH_PASS']]
       end
 
-      r.on ['items/:id', 'items'] do |id|
+      r.on 'items', [Integer, true] do |id|
         item = Item[id] if id.to_i > 0
 
         r.get do
@@ -154,7 +154,7 @@ class BGBlitz < Roda
         end
       end
 
-      r.on ['posts/:id', 'posts'] do |id|
+      r.on 'posts', [Integer, true] do |id|
         post = Post[id] if id.to_i > 0
 
         r.get do
