@@ -39,6 +39,7 @@ module Views
       'Ray Slakinski',
       'Richard Fry',
       'Robert Oswald',
+      'Rodney Smith',
       'Voltaire Jayme',
       'Winter Blair',
     ].sort.freeze
