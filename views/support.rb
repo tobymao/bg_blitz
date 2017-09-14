@@ -16,6 +16,7 @@ module Views
       'Chris Toth',
       'Clay Crucible Games',
       'Dave Krechevskoy',
+      'Dave Refici (@FrozenHoHos)',
       'Eric & Amber Davila',
       'Erik Vasu-Sarver',
       'Flip the Table',
