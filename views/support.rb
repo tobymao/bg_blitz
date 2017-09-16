@@ -22,6 +22,7 @@ module Views
       'Flip the Table',
       'Gary Franczyk',
       'Hammond Buckland',
+      'J. Brandon Massengill',
       'Jacob Shockcor',
       'Jesse Metcalf',
       'Jonny Jimison',
