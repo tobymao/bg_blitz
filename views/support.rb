@@ -25,6 +25,7 @@ module Views
       'J. Brandon Massengill',
       'Jacob Shockcor',
       'Jesse Metcalf',
+      'John Munsch',
       'Jonny Jimison',
       'Joshua Lee',
       'Larry Nehring',
