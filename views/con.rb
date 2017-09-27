@@ -49,15 +49,26 @@ module Views
           p { text "We're currently talking to sponsors to add games for prizes and our growing library." }
           br
           p { text 'Thanks to our generous sponsors!' }
+
+          sponsor 'http://home.gamekastle.com/', '/images/con/Game_Kastle.png'
+          sponsor 'https://victory-point-cafe.myshopify.com/', '/images/con/Victory_Point_Cafe.jpg'
+          sponsor 'https://www.meeplerealty.com/', '/images/con/Meeple_Realty.png'
         end
 
         div do
           widget Box, name: 'Previous', style: { background_color: BGB_PURPLE }
+
           p do
             text "Check out last year's"
             a ' convention report!', href: 'http://www.boardgameblitz.com/posts/47/blitz-con-2017-recap'
           end
         end
+      end
+    end
+
+    def sponsor site_link, image_path
+      div style: inline(margin: '10px', display: 'inline-block') do
+        a(href: site_link) { img src: image_path }
       end
     end
 
