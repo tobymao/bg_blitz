@@ -33,7 +33,7 @@ module Views
       'Megan Bealmer',
       'Merely Rachel',
       'Micah Liebert',
-      'Mike Risley',
+      'Mike',
       'Nicholas Baker',
       'Patrick Hillier',
       'Scott Vetter',
@@ -43,6 +43,7 @@ module Views
       'Richard Fry',
       'Robert Oswald',
       'Rodney Smith',
+      'Timothy Taufeek',
       'Voltaire Jayme',
       'Winter Blair',
     ].sort.freeze
