@@ -33,7 +33,7 @@ module Views
       'Megan Bealmer',
       'Merely Rachel',
       'Micah Liebert',
-      'Mike',
+      'Mike Rudmann',
       'Nicholas Baker',
       'Patrick Hillier',
       'Scott Vetter',
