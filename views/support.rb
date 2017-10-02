@@ -30,6 +30,7 @@ module Views
       'Joshua Lee',
       'Larry Nehring',
       'Mason Weaver',
+      'Matthew Young',
       'Megan Bealmer',
       'Merely Rachel',
       'Micah Liebert',
