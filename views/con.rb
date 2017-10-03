@@ -53,6 +53,7 @@ module Views
           sponsor 'http://home.gamekastle.com/', '/images/con/Game_Kastle.png'
           sponsor 'https://victory-point-cafe.myshopify.com/', '/images/con/Victory_Point_Cafe.jpg'
           sponsor 'https://www.meeplerealty.com/', '/images/con/Meeple_Realty.png'
+          sponsor 'https://www.level99games.com/', '/images/con/Level_99.png'
         end
 
         div do
