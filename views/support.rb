@@ -25,6 +25,7 @@ module Views
       'Hammond Buckland',
       'J. Brandon Massengill',
       'Jacob Shockcor',
+      'Jerrett Watts',
       'Jesse Metcalf',
       'John Munsch',
       'Jonny Jimison',
