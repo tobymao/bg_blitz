@@ -48,6 +48,7 @@ module Views
       'Richard Fry',
       'Robert Oswald',
       'Rodney Smith',
+      'Spencer Hopkins',
       'Timothy Taufeek',
       'Voltaire Jayme',
       'Winter Blair',
