@@ -23,6 +23,7 @@ module Views
       'Flip the Table',
       'Gary Franczyk',
       'Hammond Buckland',
+      'HolaKyle',
       'J. Brandon Massengill',
       'Jacob Shockcor',
       'Jerrett Watts',
