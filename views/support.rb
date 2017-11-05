@@ -56,13 +56,7 @@ module Views
     ].sort.freeze
 
     def render_main
-      container_style = inline(
-        margin: '2em 0 2em 0',
-        line_height: '1.5em',
-        text_align: 'center',
-      )
-
-      div style: container_style do
+      div style: default_container_style(text_align: 'center') do
         h1 'Support Us'
 
         a href: 'https://www.patreon.com/boardgameblitz', target: '_blank' do

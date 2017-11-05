@@ -186,5 +186,14 @@ module Views
         end
       end
     end
+
+    def default_container_style opts = {}
+      inline({
+        margin: '2em 0 2em 0',
+        line_height: '1.5em',
+        text_align: 'left',
+      }.merge(opts))
+    end
+
   end
 end

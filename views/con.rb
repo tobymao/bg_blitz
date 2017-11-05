@@ -3,13 +3,7 @@ require './views/page'
 module Views
   class Con < Page
     def render_main
-      container_style = inline(
-        margin: '2em 0 2em 0',
-        line_height: '1.5em',
-        text_align: 'left',
-      )
-
-      div style: container_style do
+      div style: default_container_style do
         img src: '/images/blitz_con.jpg', style: inline(width: '100%', min_width: '320px', margin: '5px')
 
         p style: inline(margin: '20px 0', text_align: 'justify') do

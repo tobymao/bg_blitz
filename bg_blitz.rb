@@ -108,6 +108,10 @@ class BGBlitz < Roda
       widget Views::Con
     end
 
+    r.is 'contest' do
+      widget Views::Contest
+    end
+
     r.is 'archives' do
       posts = ordered(Post).published.all
       widget Views::Archives, posts: posts

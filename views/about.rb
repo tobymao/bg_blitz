@@ -61,13 +61,7 @@ module Views
     end
 
     def render_contact
-      container_style = inline(
-        margin: '2em 0 2em 0',
-        line_height: '1.5em',
-        text_align: 'center',
-      )
-
-      div style: container_style do
+      div style: default_container_style(text_align: 'center') do
         h1 'Contact Us'
         text 'Email: '
         a 'boardgameblitz@gmail.com', href: 'mailto:boardgameblitz@gmail.com'
