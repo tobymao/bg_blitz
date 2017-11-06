@@ -32,6 +32,7 @@ module Views
       'Jonny Jimison',
       'Joshua Lee',
       'Larry Nehring',
+      'Luyi Stork',
       'Mason Weaver',
       'Matthew Young',
       'Megan Bealmer',
