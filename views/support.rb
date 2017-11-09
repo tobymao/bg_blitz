@@ -22,6 +22,7 @@ module Views
       'Erik Vasu-Sarver',
       'Flip the Table',
       'Gary Franczyk',
+      'George Campbell',
       'Hammond Buckland',
       'HolaKyle',
       'J. Brandon Massengill',
@@ -53,6 +54,7 @@ module Views
       'Spencer Hopkins',
       'Timothy Taufeek',
       'Voltaire Jayme',
+      'William B',
       'Winter Blair',
     ].sort.freeze
 
