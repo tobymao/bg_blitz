@@ -18,6 +18,11 @@ module Views
           text ' for updates.'
         end
 
+        p do
+          text 'Questions? Email us at '
+          a 'boardgameblitzcon@gmail.com', href: 'mailto:boardgameblitzcon@gmail.com'
+        end
+
         div do
           widget Box, name: 'TICKETS', style: { background_color: BGB_PURPLE }
 
