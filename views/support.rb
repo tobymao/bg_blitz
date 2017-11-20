@@ -29,6 +29,7 @@ module Views
       'Jacob Shockcor',
       'Jerrett Watts',
       'Jesse Metcalf',
+      'Joel Stout',
       'John Munsch',
       'Jonny Jimison',
       'Joshua Lee',
