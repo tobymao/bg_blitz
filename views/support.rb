@@ -38,6 +38,7 @@ module Views
       'Martin Johnson',
       'Mason Weaver',
       'Matthew Young',
+      'Max Davie',
       'Megan Bealmer',
       'Merely Rachel',
       'Micah Liebert',
