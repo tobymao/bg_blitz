@@ -37,6 +37,7 @@ module Views
       'Luyi Stork',
       'Martin Johnson',
       'Mason Weaver',
+      'Matthew Jameson',
       'Matthew Young',
       'Max Davie',
       'Megan Bealmer',
