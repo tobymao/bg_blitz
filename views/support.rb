@@ -35,7 +35,6 @@ module Views
       'Joshua Lee',
       'Larry Nehring',
       'Luyi Stork',
-      'Martin Johnson',
       'Mason Weaver',
       'Matthew Jameson',
       'Matthew Young',
