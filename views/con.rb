@@ -54,6 +54,8 @@ module Views
           sponsor 'https://www.meeplerealty.com/', '/images/con/Meeple_Realty.png'
           sponsor 'https://www.level99games.com/', '/images/con/Level_99.png'
           sponsor 'https://www.gamesofberkeley.com/', '/images/con/Games_of_Berkeley.png'
+          sponsor 'http://spielpro.com/', '/images/con/SpielPro.png'
+          sponsor 'https://www.capstone-games.com/', '/images/con/Capstone_Games.png'
         end
 
         div do
