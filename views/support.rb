@@ -10,6 +10,7 @@ module Views
       'Andrew Wilson',
       'Becky Rolfe',
       "Ben O'Steen",
+      'Bill Simoni',
       'Brad Phillips',
       'Chris Mitchel',
       'Chris Sasaki',
