@@ -29,6 +29,7 @@ module Views
       'Jerrett Watts',
       'Jesse Metcalf',
       'Joel Stout',
+      'John du Bois',
       'John Munsch',
       'Jonny Jimison',
       'Joshua Lee',
