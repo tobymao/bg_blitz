@@ -56,6 +56,7 @@ module Views
           sponsor 'https://www.gamesofberkeley.com/', '/images/con/Games_of_Berkeley.png'
           sponsor 'http://spielpro.com/', '/images/con/SpielPro.png'
           sponsor 'https://www.capstone-games.com/', '/images/con/Capstone_Games.png'
+          sponsor 'https://www.gamesurplus.com/', '/images/con/Game_Surplus.png'
         end
 
         div do
