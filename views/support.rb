@@ -35,6 +35,7 @@ module Views
       'Joshua Lee',
       'Karen Cleveland',
       'Larry Nehring',
+      'Lindsay Grossmann',
       'Luyi Stork',
       'Matthew Jameson',
       'Matthew Young',
