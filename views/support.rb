@@ -59,6 +59,7 @@ module Views
       'Spencer Hopkins',
       'Timothy Taufeek',
       'Voltaire Jayme',
+      "What's Eric Playing",
       'William B',
       'Winter Blair',
     ].sort.freeze
