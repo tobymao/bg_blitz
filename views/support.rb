@@ -23,7 +23,6 @@ module Views
       'Gary Franczyk',
       'George Campbell',
       'Hammond Buckland',
-      'HolaKyle',
       'J. Brandon Massengill',
       'Jacob Shockcor',
       'Jerrett Watts',
