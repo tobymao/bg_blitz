@@ -57,6 +57,7 @@ module Views
           sponsor 'http://spielpro.com/', '/images/con/SpielPro.png'
           sponsor 'https://www.capstone-games.com/', '/images/con/Capstone_Games.png'
           sponsor 'https://www.gamesurplus.com/', '/images/con/Game_Surplus.png'
+          sponsor 'https://www.etsy.com/shop/LaserBlastLaserCraft', '/images/con/Lasercraft.png'
         end
 
         div do
