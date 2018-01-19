@@ -46,6 +46,7 @@ module Views
       'Mike Risley',
       'Mike Rudmann',
       'Nicholas Baker',
+      'Nicholas I Martinez',
       'Paul McGowan',
       'Scott Vetter',
       'Rachel Atkins',
