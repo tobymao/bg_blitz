@@ -58,6 +58,17 @@ module Views
           sponsor 'https://www.capstone-games.com/', '/images/con/Capstone_Games.png'
           sponsor 'https://www.gamesurplus.com/', '/images/con/Game_Surplus.png'
           sponsor 'https://www.etsy.com/shop/LaserBlastLaserCraft', '/images/con/Lasercraft.png'
+          sponsor 'http://greyfoxgames.com/', '/images/con/Grey_Fox_Games.png'
+
+          br
+          br
+
+          p do
+            text 'The following publishers are donating to our play to win program through '
+            a 'Envoy.', href: 'https://www.dexposure.com/envoy/index.html'
+          end
+
+          sponsor 'http://www.rnrgames.com/', '/images/con/rrgames.jpg'
         end
 
         div do
