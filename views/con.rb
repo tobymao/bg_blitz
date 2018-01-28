@@ -69,6 +69,8 @@ module Views
           end
 
           sponsor 'http://www.rnrgames.com/', '/images/con/rrgames.jpg'
+          sponsor 'https://beziergames.com/', '/images/con/bezier.jpg'
+          sponsor 'https://www.maydaygames.com/', '/images/con/mayday.jpg'
         end
 
         div do
