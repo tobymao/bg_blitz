@@ -77,6 +77,10 @@ module Views
         br
         text 'BoardGameGeek Guild: '
         a 'Board Game Blitz', href: 'https://www.boardgamegeek.com/guild/2581', target: 'blank'
+
+        br
+        text 'Twitch: '
+        a 'BoardGameBlitz', href: 'https://www.twitch.tv/boardgameblitz', target: 'blank'
       end
     end
 
