@@ -24,7 +24,6 @@ module Views
       'George Campbell',
       'Hammond Buckland',
       'J. Brandon Massengill',
-      'Jacob Shockcor',
       'Jerrett Watts',
       'Jesse Metcalf',
       'Joel Stout',
