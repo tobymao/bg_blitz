@@ -73,7 +73,7 @@ module Views
           sponsor 'https://beziergames.com/', '/images/con/bezier.jpg'
           sponsor 'https://www.maydaygames.com/', '/images/con/mayday.jpg'
           sponsor 'http://www.smirkanddagger.com/', '/images/con/smirkdagger.jpg'
-          sponsor 'http://strongholdgames.com/', 'stronghold.jpg'
+          sponsor 'http://strongholdgames.com/', '/images/con/stronghold.jpg'
           sponsor 'http://www.habausa.com/', '/images/con/haba.jpg'
           sponsor 'http://www.publishing.brain-games.com/', '/images/con/braingames.jpg'
         end
