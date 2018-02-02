@@ -76,6 +76,7 @@ module Views
           sponsor 'http://strongholdgames.com/', '/images/con/stronghold.jpg'
           sponsor 'http://www.habausa.com/', '/images/con/haba.jpg'
           sponsor 'http://www.publishing.brain-games.com/', '/images/con/braingames.jpg'
+          sponsor 'http://www.thamesandkosmos.com/', '/images/con/thameskosmos.jpg'
         end
 
         div do
