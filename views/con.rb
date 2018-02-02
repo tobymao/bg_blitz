@@ -59,6 +59,7 @@ module Views
           sponsor 'https://www.gamesurplus.com/', '/images/con/Game_Surplus.png'
           sponsor 'https://www.etsy.com/shop/LaserBlastLaserCraft', '/images/con/Lasercraft.png'
           sponsor 'http://greyfoxgames.com/', '/images/con/Grey_Fox_Games.png'
+          sponsor 'http://www.gatorgames.com/', '/images/con/gator_games.png'
 
           br
           br
@@ -71,6 +72,10 @@ module Views
           sponsor 'http://www.rnrgames.com/', '/images/con/rrgames.jpg'
           sponsor 'https://beziergames.com/', '/images/con/bezier.jpg'
           sponsor 'https://www.maydaygames.com/', '/images/con/mayday.jpg'
+          sponsor 'http://www.smirkanddagger.com/', '/images/con/smirkdagger.jpg'
+          sponsor 'http://strongholdgames.com/', 'stronghold.jpg'
+          sponsor 'http://www.habausa.com/', '/images/con/haba.jpg'
+          sponsor 'http://www.publishing.brain-games.com/', '/images/con/braingames.jpg'
         end
 
         div do
