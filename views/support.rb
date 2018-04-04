@@ -55,6 +55,7 @@ module Views
       'Richard Fry',
       'Robert Oswald',
       'Rodney Smith',
+      'Sean Koehn',
       'Spencer Hopkins',
       'Timothy Taufeek',
       'Voltaire Jayme',
