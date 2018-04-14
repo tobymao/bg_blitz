@@ -33,6 +33,7 @@ module Views
       'Jonny Jimison',
       'Joshua Lee',
       'Karen Cleveland',
+      'Keith McRell',
       'Lance Morgan',
       'Larry Nehring',
       'Lindsay Grossmann',
