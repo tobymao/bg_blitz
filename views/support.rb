@@ -28,6 +28,7 @@ module Views
       'J. Brandon Massengill',
       'Jerrett Watts',
       'Jesse Metcalf',
+      'Joe C',
       'Joel Stout',
       'John du Bois',
       'John Munsch',
