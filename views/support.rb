@@ -12,6 +12,7 @@ module Views
       "Ben O'Steen",
       'Bill Simoni',
       'Catherine Wiener',
+      'Carmen Petruzzelli',
       'Charles Beauvais',
       'Chris Mitchel',
       'Chris Sasaki',
