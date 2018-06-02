@@ -38,6 +38,7 @@ module Views
       'Joshua Lee',
       'Karen Cleveland',
       'Keith McRell',
+      'Kevin Russ',
       'Lance Morgan',
       'Larry Nehring',
       'Lindsay Grossmann',
