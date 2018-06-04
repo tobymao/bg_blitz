@@ -60,6 +60,7 @@ module Views
       'Rafael Cordero',
       'Rattlebox Games',
       'Ray Slakinski',
+      'Rebekah Harmon',
       'Richard Fry',
       'Robert Oswald',
       'Rodney Smith',
