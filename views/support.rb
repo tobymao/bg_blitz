@@ -16,6 +16,7 @@ module Views
       'Carmen Petruzzelli',
       'Charles Beauvais',
       'Chris Mitchel',
+      'Chris Nokleberg',
       'Chris Sasaki',
       'Chris Toth',
       'Clay Crucible Games',
