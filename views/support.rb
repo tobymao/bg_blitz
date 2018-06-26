@@ -29,6 +29,7 @@ module Views
       'George Campbell',
       'Hammond Buckland',
       'J. Brandon Massengill',
+      'James Fitzgerald',
       'Jerrett Watts',
       'Jesse Metcalf',
       'Joe C',
