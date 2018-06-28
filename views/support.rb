@@ -11,6 +11,7 @@ module Views
       'Becky Rolfe',
       'Ben Cook',
       "Ben O'Steen",
+      'Big Tom Casual',
       'Bill Simoni',
       'Catherine Wiener',
       'Carmen Petruzzelli',
