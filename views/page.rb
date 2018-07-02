@@ -9,7 +9,6 @@ module Views
       ['Content ▾', [['Podcasts', '/podcasts'], ['Videos', '/videos'], ['Blog', '/blog']]],
       ['About', '/about'],
       ['Support Us', '/support'],
-      ['Blitz Con', '/con'],
     ].freeze
 
     def content
