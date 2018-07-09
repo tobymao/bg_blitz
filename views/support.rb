@@ -38,6 +38,7 @@ module Views
       'John du Bois',
       'John Munsch',
       'Jonny Jimison',
+      'Joshua Lamkin',
       'Joshua Lee',
       'Karen Cleveland',
       'Keith McRell',
