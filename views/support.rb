@@ -70,6 +70,7 @@ module Views
       'Rodney Smith',
       'Sean Koehn',
       'Spencer Hopkins',
+      'Terrence',
       'Voltaire Jayme',
       "What's Eric Playing",
       'William B',
