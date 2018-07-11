@@ -28,6 +28,7 @@ module Views
       'Flip the Table',
       'Gary Franczyk',
       'George Campbell',
+      'Greg Dickson',
       'J. Brandon Massengill',
       'Jake Bock',
       'James Fitzgerald',
