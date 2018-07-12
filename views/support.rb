@@ -16,6 +16,7 @@ module Views
       'Catherine Wiener',
       'Carmen Petruzzelli',
       'Charles Beauvais',
+      'Chris Imershein',
       'Chris Mitchel',
       'Christopher Nokleberg',
       'Chris Sasaki',
