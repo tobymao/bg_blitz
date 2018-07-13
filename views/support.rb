@@ -22,6 +22,7 @@ module Views
       'Chris Sasaki',
       'Chris Toth',
       'Clay Crucible Games',
+      'David Fair',
       'Dave Krechevskoy',
       'Dave Refici (@FrozenHoHos)',
       'Eric & Amber Davila',
