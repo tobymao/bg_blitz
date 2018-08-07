@@ -27,6 +27,7 @@ module Views
       'David Briel',
       'Dave Krechevskoy',
       'Dave Refici (@FrozenHoHos)',
+      'Drew Hicks',
       'Eric & Amber Davila',
       'Erik Vasu-Sarver',
       'Flip the Table',
