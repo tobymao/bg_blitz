@@ -34,6 +34,7 @@ module Views
       'Gary Franczyk',
       'George Campbell',
       'Greg Dickson',
+      'Heather Guzman',
       'Hilmar Hallbjörnsson',
       'J. Brandon Massengill',
       'Jake Bock',
