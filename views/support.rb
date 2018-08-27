@@ -83,6 +83,7 @@ module Views
       'Sean Koehn',
       'Spencer Hopkins',
       'Terrence',
+      'Trevor Olsen',
       'Voltaire Jayme',
       "What's Eric Playing",
       'William B',
@@ -115,3 +116,4 @@ module Views
 
   end
 end
+
