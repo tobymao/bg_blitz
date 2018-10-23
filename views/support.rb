@@ -12,6 +12,7 @@ module Views
       "Ben O'Steen",
       'Big Tom Casual',
       'Bill Simoni',
+      'Brian Ashmore',
       'Brian Blottie',
       'Catherine Wiener',
       'Carmen Petruzzelli',
