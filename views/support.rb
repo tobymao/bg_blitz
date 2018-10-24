@@ -51,6 +51,7 @@ module Views
       'Jonny Jimison',
       'Joshua Lamkin',
       'Joshua Lee',
+      'Joshua Neikirk',
       'Karen Cleveland',
       'Keith McRell',
       'Kevin Russ',
