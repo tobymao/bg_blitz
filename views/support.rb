@@ -76,7 +76,6 @@ module Views
       'Rachel Atkins',
       'Rafael Cordero',
       'Rattlebox Games',
-      'Ray Slakinski',
       'Rebekah Harmon',
       'Richard Fry',
       'Rob Greanias',
