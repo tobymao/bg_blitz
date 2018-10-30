@@ -53,6 +53,7 @@ module Views
       'Joshua Lee',
       'Joshua Neikirk',
       'Karen Cleveland',
+      'Katrina Baker',
       'Keith McRell',
       'Kevin Russ',
       'Lance Morgan',
