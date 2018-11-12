@@ -32,7 +32,6 @@ module Views
       'Drew Hicks',
       'Eric & Amber Davila',
       'Eric Glimme',
-      'Erik Vasu-Sarver',
       'Flip the Table',
       'Gary Franczyk',
       'George Campbell',
