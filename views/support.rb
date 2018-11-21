@@ -81,6 +81,7 @@ module Views
       'Rob Greanias',
       'Robert Oswald',
       'Rodney Smith',
+      'Rosco Schock',
       'Sean Koehn',
       'Spencer Hopkins',
       'Terrence',
