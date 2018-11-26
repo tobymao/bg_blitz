@@ -6,7 +6,7 @@ module Views
     DESCRIPTION = 'Board Game Blitz is a 30 minute bi-weekly podcast about modern board games and card games hosted by Ambie, Cassadi, and Crystal.'.freeze
     NAME        = 'Board Game Blitz'.freeze
     SITE_URL    = 'http://www.boardgameblitz.com'.freeze
-    IMAGE_URL   = SITE_URL + '/images/logo_itunes.jpg'.freeze
+    IMAGE_URL   = SITE_URL + '/images/logo_itunes_2.jpg'.freeze
 
     def self.rss posts:, items:
       rss = RSS::Rss.new '2.0'
