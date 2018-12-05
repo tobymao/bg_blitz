@@ -6,6 +6,7 @@ module Views
       'Adam Reeve',
       'Adrienne Dong',
       'Alan Skinner',
+      'Amos Cai',
       'Andrew Wilson',
       'Becky Rolfe',
       'Ben Cook',
