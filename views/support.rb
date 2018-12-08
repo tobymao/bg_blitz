@@ -15,6 +15,7 @@ module Views
       'Bill Simoni',
       'Brian Ashmore',
       'Brian Blottie',
+      'Brian Ganninger',
       'Catherine Wiener',
       'Carmen Petruzzelli',
       'Charles Beauvais',
