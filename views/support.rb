@@ -74,6 +74,7 @@ module Views
       'Nicholas Baker',
       'Nicholas I Martinez',
       'Paul McGowan',
+      'Philippe Norel-Wilson',
       'Scott Vetter',
       'Rachel Atkins',
       'Rafael Cordero',
