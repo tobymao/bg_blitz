@@ -47,7 +47,6 @@ module Views
       'Jesse Metcalf',
       'Joe C',
       'Joel Stout',
-      'John du Bois',
       'John Munsch',
       'Jonny Jimison',
       'Joshua Lamkin',
