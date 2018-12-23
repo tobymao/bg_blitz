@@ -63,7 +63,6 @@ module Views
       'Mark Cruzan-Rea',
       'Matthew Jameson',
       'Matthew Young',
-      'Megan Bealmer',
       'Merely Rachel',
       'Micah Liebert',
       'Miguel Manansala',
