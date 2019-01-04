@@ -71,7 +71,6 @@ module Views
       'Miguel Manansala',
       'Mike Risley',
       'Mike Rudmann',
-      'Nathan Thompson',
       'Nicholas Baker',
       'Nicholas I Martinez',
       'Paul McGowan',
