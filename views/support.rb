@@ -95,6 +95,7 @@ module Views
       'Trevor Olsen',
       "What's Eric Playing",
       'William B',
+      'William Carrigan',
       'Winter Blair',
     ].sort.freeze
 
