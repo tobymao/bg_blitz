@@ -36,6 +36,7 @@ module Views
       'Drew Hicks',
       'Eric & Amber Davila',
       'Eric Glimme',
+      'Eugene Meidinger',
       'Flip the Table',
       'Gary Franczyk',
       'George Campbell',
