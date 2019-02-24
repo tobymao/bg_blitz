@@ -44,6 +44,7 @@ module Views
       'Hilmar Hallbjörnsson',
       'J. Brandon Massengill',
       'Jake Bock',
+      'James Ewing',
       'James Fitzgerald',
       'Jen E',
       'Jerrett Watts',
