@@ -66,6 +66,7 @@ module Views
       'Luyi Stork',
       'Maria Ella Ampongan',
       'Mark Cruzan-Rea',
+      'Marylou Holly',
       'Matthew Jameson',
       'Matthew Young',
       'Merely Rachel',
