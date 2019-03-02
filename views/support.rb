@@ -43,7 +43,6 @@ module Views
       'Greg Dickson',
       'Hilmar Hallbjörnsson',
       'J. Brandon Massengill',
-      'Jake Bock',
       'James Ewing',
       'James Fitzgerald',
       'Jen E',
