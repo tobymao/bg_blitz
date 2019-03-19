@@ -14,6 +14,7 @@ module Views
       "Ben O'Steen",
       'Big Tom Casual',
       'Bill Simoni',
+      'Brad Phillips',
       'Brian Ashmore',
       'Brian Blottie',
       'Brian Ganninger',
