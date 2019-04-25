@@ -59,6 +59,7 @@ module Views
       'Joshua Neikirk',
       'Karen Cleveland',
       'Katrina Baker',
+      'Kayla Nimis',
       'Kevin Russ',
       'Lance Morgan',
       'Larry Nehring',
