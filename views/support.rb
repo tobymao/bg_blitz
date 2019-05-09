@@ -85,7 +85,6 @@ module Views
       'Rebekah Harmon',
       'Richard Fry',
       'Rob Greanias',
-      'Rodney Smith',
       'Rosco Schock',
       'Sean Koehn',
       'Spencer Hopkins',
