@@ -14,7 +14,8 @@ module Views
       text_style = inline line_height: '1.3em'
 
       div style: text_style do
-        text "Board Game Blitz is a bi-weekly podcast and video series about modern board games and card games hosted by Ambie, Cassadi, and Crystal."
+        text "Board Game Blitz is a bi-weekly podcast about modern board games and card games hosted by Ambie and Crystal. We also produce videos on the "
+        a "Dice Tower's Youtube channel.", href: 'https://www.youtube.com/user/thedicetower'
       end
 
       render_box 'Ambie', BGB_BLUE, ambie_icons, 137, 103
@@ -27,20 +28,6 @@ module Views
           "into the hobby together. Now, Ambie plays a lot of 2-player games with her husband. They enjoy thematic Euros - games that "\
           "integrate the mechanics with the theme. Some of Ambie's favorite games are The Resistance: Avalon, Codenames, Arkwright, Space "\
           "Alert, and Tragedy Looper. Outside of board games, she enjoys singing, knitting, crocheting, and Brazilian Jiu Jitsu."
-      end
-
-      cassadi_icons = [
-        Icons::Icon.new('bgg', 'https://boardgamegeek.com/user/noajayne', 'BGG'),
-        Icons::Icon.new('twitter', 'https://twitter.com/noajayne', 'Twitter'),
-      ]
-
-      render_box 'Cassadi', BGB_PINK, cassadi_icons, 205, 171
-
-      div style: text_style do
-        text "Cassadi has been board gaming for roughly 10 years. Though, the acquisition disorder didn't set in until 2 years ago. "\
-          "Since then she has played hundreds of different games, and found she enjoys teaching new players almost as much as she "\
-          "enjoys playing her favorites. Some at the top of the list are Carcassonne, Five Tribes, Tokaido, and Puerto Rico. She will "\
-          "try most any game once! Other than board gaming Cassadi enjoys being a local craft beer snob and spending time with her family."
       end
 
       crystal_icons = [
@@ -57,6 +44,20 @@ module Views
           "Crystal's personal game collection has grown in the years since and she enjoys a wide range of games, particularly those where the "\
           "theme is well implemented. Battlestar Galactica is her favorite, but her more recent loves include Pandemic Legacy and T.I.M.E. "\
           "Stories. She'll tell you she hates euro games, but she's willing to give any game a shot if it's with the right group."
+      end
+
+      cassadi_icons = [
+        Icons::Icon.new('bgg', 'https://boardgamegeek.com/user/noajayne', 'BGG'),
+        Icons::Icon.new('twitter', 'https://twitter.com/noajayne', 'Twitter'),
+      ]
+
+      render_box 'Cassadi', BGB_PINK, cassadi_icons, 205, 171, 'Former Host'
+
+      div style: text_style do
+        text "Cassadi has been board gaming for roughly 10 years. Though, the acquisition disorder didn't set in until 2 years ago. "\
+          "Since then she has played hundreds of different games, and found she enjoys teaching new players almost as much as she "\
+          "enjoys playing her favorites. Some at the top of the list are Carcassonne, Five Tribes, Tokaido, and Puerto Rico. She will "\
+          "try most any game once! Other than board gaming Cassadi enjoys being a local craft beer snob and spending time with her family."
       end
     end
 
@@ -88,7 +89,7 @@ module Views
       'About'
     end
 
-    def render_box name, color, icons, x, y
+    def render_box name, color, icons, x, y, extra = nil
       style Icons.icons_css(name, Icons::ICONS, x, y, 30)
 
       widget Box, name: name, style: { background_color: color }
@@ -99,8 +100,20 @@ module Views
             a href: data.url, tooltip: data.name
           end
         end
+
+        if extra
+          style = {
+            list_style_type: 'none',
+            display: 'inline',
+            vertical_align: 'bottom',
+            position: 'relative',
+            bottom: '10px',
+            left: '10px',
+            font_style: 'italic',
+          }
+          li extra, style: inline(style)
+        end
       end
     end
-
   end
 end

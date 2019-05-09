@@ -107,6 +107,14 @@ module Views
           img src: '/images/patreon.png', style: inline(height: '45px')
         end
 
+        div style: inline(margin: '10px') do
+          text 'Check out our '
+
+          a href: 'https://www.redbubble.com/people/boardgameblitz/shop', target: '_blank' do
+            text 'merchandise on Redbubble!'
+          end
+        end
+
         h1 style: inline(margin: '20px 0 20px 0', font_size: '25px') do
           text 'Thanks To Our Current Patrons'
         end
