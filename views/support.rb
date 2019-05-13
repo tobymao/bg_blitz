@@ -56,6 +56,7 @@ module Views
       'Joshua Lamkin',
       'Joshua Lee',
       'Joshua Neikirk',
+      'Joshua Starr',
       'Karen Cleveland',
       'Katrina Baker',
       'Kayla Nimis',
