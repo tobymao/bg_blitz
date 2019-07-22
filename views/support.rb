@@ -29,6 +29,7 @@ module Views
       'Clay Crucible Games',
       'Cory Cray',
       'Darth Grader',
+      'David Campos',
       'David Fair',
       'David Briel',
       'Dave Krechevskoy',
