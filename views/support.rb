@@ -72,6 +72,7 @@ module Views
       'Merely Rachel',
       'Micah Liebert',
       'Michael McCallen',
+      'Michelle English',
       'Miguel Manansala',
       'Mike Risley',
       'Mike Rudmann',
