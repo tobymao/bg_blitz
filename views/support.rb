@@ -67,6 +67,7 @@ module Views
       'Luyi Stork',
       'Mark Cruzan-Rea',
       'Marylou Holly',
+      'Mathilde Bruneau',
       'Matthew Jameson',
       'Matthew Young',
       'Merely Rachel',
