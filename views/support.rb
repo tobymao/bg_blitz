@@ -43,6 +43,7 @@ module Views
       'Gary Franczyk',
       'George Campbell',
       'Greg Dickson',
+      'Hammond Buckland',
       'Hilmar Hallbjörnsson',
       'Jae Malloy',
       'James Ewing',
