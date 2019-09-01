@@ -81,6 +81,7 @@ module Views
       'Mike Rudmann',
       'Nicholas Baker',
       'Nicholas I Martinez',
+      'Pamela Wagner',
       'Patrick Hillier',
       'Paul McGowan',
       'Philippe Norel-Wilson',
