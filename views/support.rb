@@ -3,7 +3,6 @@ require './views/page'
 module Views
   class Support < Page
     SUPPORTERS = [
-      'Adam Brocker',
       'Adam Reeve',
       'Adrienne Dong',
       'Alan Skinner',
@@ -61,7 +60,6 @@ module Views
       'Karen Cleveland',
       'Katrina Baker',
       'Kayla Nimis',
-      'Kellen Allen',
       'Kevin Russ',
       'Lance Morgan',
       'Lindsay Grossmann',
