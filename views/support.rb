@@ -53,6 +53,7 @@ module Views
       'Joe C',
       'John Munsch',
       'Jonny Jimison',
+      'Joseph Orso',
       'Joshua Lamkin',
       'Joshua Lee',
       'Joshua Neikirk',
