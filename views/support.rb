@@ -23,7 +23,6 @@ module Views
       'Chris Imershein',
       'Chris Mitchel',
       'Chris Sasaki',
-      'Chris Toth',
       'Clay Crucible Games',
       'Cory Cray',
       'Darth Grader',
