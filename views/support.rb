@@ -88,6 +88,7 @@ module Views
       'Sean Koehn',
       'Spencer Hopkins',
       'Terrence',
+      'Therese Monahan',
       'Trevor Olsen',
       "What's Eric Playing",
       'William B',
