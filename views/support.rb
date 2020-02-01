@@ -81,6 +81,7 @@ module Views
       'Richard Fry',
       'Rob Greanias',
       'Rosco Schock',
+      'Sara Tedrick Parikh',
       'Scott',
       'Sean Koehn',
       'Spencer Hopkins',
