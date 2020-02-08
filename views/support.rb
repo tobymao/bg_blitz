@@ -8,6 +8,7 @@ module Views
       'Alan Skinner',
       'Andrew Wilson',
       'bac68',
+      'Barbara',
       'Ben Cook',
       "Ben O'Steen",
       'Big Tom Casual',
