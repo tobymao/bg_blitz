@@ -85,6 +85,7 @@ module Views
       'Spencer Hopkins',
       'Terrence',
       'Therese Monahan',
+      'Toni Nummela',
       'Trevor Olsen',
       "What's Eric Playing",
       'William B',
