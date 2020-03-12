@@ -42,6 +42,7 @@ module Views
       'Jen E',
       'Jerrett Watts',
       'Jesse Metcalf',
+      'Jessica Barnes',
       'Jim K',
       'Joe C',
       'John Munsch',
