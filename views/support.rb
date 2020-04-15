@@ -61,6 +61,7 @@ module Views
       'Mark Cruzan-Rea',
       'Marylou Holly',
       'Mathilde Bruneau',
+      'Matt Maurice',
       'Matthew Jameson',
       'Matthew Young',
       'Merely Rachel',
