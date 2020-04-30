@@ -81,6 +81,7 @@ module Views
       'Rattlebox Games',
       'Richard Fry',
       'Rob Greanias',
+      'Robert Oswald',
       'Rosco Schock',
       'Sara Tedrick Parikh',
       'Scott',
