@@ -15,6 +15,7 @@ module Views
       'Brian Ashmore',
       'Brian Ganninger',
       'Catherine Wiener',
+      'Charles Albrecht',
       'Charles Beauvais',
       'Chris Imershein',
       'Chris Mitchel',
