@@ -60,6 +60,7 @@ module Views
       'Lindsay Grossmann',
       'Luyi Stork',
       'Mark Cruzan-Rea',
+      'MaryBeth Breslin',
       'Marylou Holly',
       'Mathilde Bruneau',
       'Matt Maurice',
