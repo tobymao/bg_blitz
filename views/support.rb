@@ -53,6 +53,7 @@ module Views
       'Joshua Lee',
       'Joshua Neikirk',
       'Joshua Starr',
+      'Justin Difazzio',
       'Karen Cleveland',
       'Katrina Baker',
       'Kayla Nimis',
