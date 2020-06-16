@@ -57,6 +57,7 @@ module Views
       'Kayla Nimis',
       'Kevin Russ',
       'Lindsay Grossmann',
+      'Liz Chapman',
       'Luyi Stork',
       'Mark Cruzan-Rea',
       'MaryBeth Breslin',
