@@ -17,6 +17,7 @@ module Views
       'Catherine Wiener',
       'Charles Albrecht',
       'Charles Beauvais',
+      'Chris Ferejohn',
       'Chris Imershein',
       'Chris Mitchel',
       'Chris Sasaki',
