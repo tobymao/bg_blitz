@@ -49,6 +49,7 @@ module Views
       'John Munsch',
       'Jonny Jimison',
       'Joseph Orso',
+      'Josh Laison',
       'Joshua Lamkin',
       'Joshua Lee',
       'Joshua Starr',
