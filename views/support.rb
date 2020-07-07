@@ -12,6 +12,7 @@ module Views
       'Ben Cook',
       "Ben O'Steen",
       'Big Tom Casual',
+      'Board Game Barrage',
       'Brian Ashmore',
       'Brian Ganninger',
       'Catherine Wiener',
