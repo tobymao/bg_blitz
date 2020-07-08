@@ -41,6 +41,7 @@ module Views
       'Jae Malloy',
       'James Ewing',
       'Jen E',
+      'Jenn B',
       'Jessica Barnes',
       'Jim K',
       'Joe C',
