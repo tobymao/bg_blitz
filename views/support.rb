@@ -57,6 +57,7 @@ module Views
       'Katrina Baker',
       'Kayla Nimis',
       'Keith Jones',
+      'Kent Parker',
       'Kevin Russ',
       'Lindsay Grossmann',
       'Liz Chapman',
