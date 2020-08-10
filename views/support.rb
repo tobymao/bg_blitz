@@ -78,6 +78,7 @@ module Views
       'Nicholas Baker',
       'Pamela Wagner',
       'Patrick Hillier',
+      'Paul Tompkins',
       'Philippe Norel-Wilson',
       'R Roy',
       'Rafael Cordero',
