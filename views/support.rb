@@ -59,6 +59,7 @@ module Views
       'Keith Jones',
       'Kent Parker',
       'Kevin Russ',
+      'kibosh',
       'Lindsay Grossmann',
       'Liz Chapman',
       'Luyi Stork',
