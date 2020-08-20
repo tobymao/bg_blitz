@@ -36,6 +36,7 @@ module Views
       'Flip the Table',
       'Gary Franczyk',
       'George Campbell',
+      'Graham Glaser',
       'Greg Dickson',
       'Hilmar Hallbjörnsson',
       'Jae Malloy',
