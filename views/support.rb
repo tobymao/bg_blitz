@@ -95,6 +95,7 @@ module Views
       'Therese Monahan',
       'Toni Nummela',
       'Trevor Olsen',
+      'Trey Radu-Blackburn',
       "What's Eric Playing",
       'William Carrigan',
       'Winter Blair',
