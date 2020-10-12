@@ -3,7 +3,7 @@ require 'rss/itunes'
 
 module Views
   module PodcastRSS
-    DESCRIPTION = 'Board Game Blitz is a 30 minute bi-weekly podcast about modern board games and card games hosted by Ambie, Cassadi, and Crystal.'.freeze
+    DESCRIPTION = 'Board Game Blitz is a 30 minute bi-weekly podcast about modern board games and card games hosted by Ambie and Crystal.'.freeze
     NAME        = 'Board Game Blitz'.freeze
     SITE_URL    = 'http://www.boardgameblitz.com'.freeze
     IMAGE_URL   = SITE_URL + '/images/logo_itunes_2.jpg'.freeze
