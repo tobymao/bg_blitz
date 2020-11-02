@@ -79,7 +79,6 @@ module Views
       'Pamela Wagner',
       'Patrick Hillier',
       'Paul Tompkins',
-      'Philippe Norel-Wilson',
       'R Roy',
       'Rafael Cordero',
       'Rattlebox Games',
