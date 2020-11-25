@@ -76,6 +76,7 @@ module Views
       'Miguel Manansala',
       'Mike Rudmann',
       'Nicholas Baker',
+      'Nicolas Le Roux',
       'Pamela Wagner',
       'Patrick Hillier',
       'Paul Tompkins',
