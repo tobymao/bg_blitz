@@ -35,6 +35,7 @@ module Views
       'Evan Schmalz',
       'Flip the Table',
       'Gary Franczyk',
+      'Geoff Mathews',
       'George Campbell',
       'Graham Glaser',
       'Greg Dickson',
