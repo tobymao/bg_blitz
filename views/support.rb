@@ -46,6 +46,7 @@ module Views
       'Jim K',
       'Joe C',
       'John Munsch',
+      'Jon Paul',
       'Joseph Orso',
       'Josh Laison',
       'Joshua Lamkin',
