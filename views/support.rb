@@ -30,6 +30,7 @@ module Views
       'Dave Refici (@FrozenHoHos)',
       'Drew Hicks',
       'Dustin Hatchett',
+      'Eric',
       'Eric & Amber Davila',
       'Evan Schmalz',
       'Flip the Table',
