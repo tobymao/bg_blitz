@@ -25,6 +25,7 @@ module Views
       'Chris Sasaki',
       'Chris Zebley',
       'Clay Crucible Games',
+      "Daniel Joseph O'Neil",
       'David Briel',
       'Dave Krechevskoy',
       'Dave Refici (@FrozenHoHos)',
