@@ -40,6 +40,7 @@ module Views
       'Greg Dickson',
       'Hilmar Hallbjörnsson',
       'Jae Malloy',
+      'Jayson Smith',
       'Jen E',
       'Jenn B',
       'Jessica Barnes',
