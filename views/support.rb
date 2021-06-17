@@ -78,7 +78,6 @@ module Views
       'Nicholas Baker',
       'Pamela Wagner',
       'Patrick Hillier',
-      'Paul Tompkins',
       'Rattlebox Games',
       'Richard Fry',
       'Rob Greanias',
