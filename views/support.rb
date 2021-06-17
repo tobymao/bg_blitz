@@ -74,7 +74,6 @@ module Views
       'Micah Liebert',
       'Michael McCallen',
       'Miguel Manansala',
-      'Mike Rudmann',
       'Nicholas Baker',
       'Pamela Wagner',
       'Patrick Hillier',
