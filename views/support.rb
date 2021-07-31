@@ -35,6 +35,7 @@ module Views
       'Gary Franczyk',
       'Geoff Mathews',
       'George Campbell',
+      'George Stankow',
       'Graham Glaser',
       'Greg Dickson',
       'Hilmar Hallbjörnsson',
