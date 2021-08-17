@@ -14,6 +14,7 @@ module Views
     def content
       html do
         head do
+          link type: 'application/rss+xml', rel: 'alternate', title: 'Board Game Blitz', href: 'http://www.boardgameblitz.com/rss.xml'
           link rel: 'stylesheet', type: 'text/css', href: 'https://fonts.googleapis.com/css?family=Open+Sans:400,400italic,700'
           link rel: 'stylesheet', type: 'text/css', href: '/vendor/reset.min.css'
           link rel: 'shortcut icon', type: 'image/png', href: '/images/favicon.ico'
