@@ -82,7 +82,6 @@ module Views
       'Rosco Schock',
       'Sara Tedrick Parikh',
       'Scott',
-      'Sean Koehn',
       'Spencer Hopkins',
       'Terrence',
       'Trey Radu-Blackburn',
