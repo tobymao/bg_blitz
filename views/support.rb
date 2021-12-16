@@ -27,6 +27,7 @@ module Views
       'David Briel',
       'Dave Krechevskoy',
       'Dave Refici (@FrozenHoHos)',
+      'Dexton',
       'Drew Hicks',
       'Eric & Amber Davila',
       'Evan Schmalz',
