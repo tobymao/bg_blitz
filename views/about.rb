@@ -32,7 +32,7 @@ module Views
 
       crystal_icons = [
         Icons::Icon.new('bgg', 'https://boardgamegeek.com/user/CrysP', 'BGG'),
-        Icons::Icon.new('twitter', 'https://twitter.com/CrystalPisano', 'Twitter'),
+        Icons::Icon.new('twitter', 'https://twitter.com/CrystalDax', 'Twitter'),
       ]
 
       render_box 'Crystal', BGB_PURPLE, crystal_icons, 69, 35
