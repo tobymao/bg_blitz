@@ -25,7 +25,6 @@ module Views
       'Clay Crucible Games',
       "Daniel Joseph O'Neil",
       'David Briel',
-      'Dave Krechevskoy',
       'Dave Refici (@FrozenHoHos)',
       'Dexton',
       'Drew Hicks',
