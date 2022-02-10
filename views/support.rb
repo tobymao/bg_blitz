@@ -26,7 +26,6 @@ module Views
       "Daniel Joseph O'Neil",
       'David Briel',
       'Dave Refici (@FrozenHoHos)',
-      'Dexton',
       'Drew Hicks',
       'Eric & Amber Davila',
       'Evan Schmalz',
