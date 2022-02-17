@@ -35,6 +35,7 @@ module Views
       'George Stankow',
       'Graham Glaser',
       'Greg Dickson',
+      'Harley Winfrey',
       'Hilmar Hallbjörnsson',
       'Jae Malloy',
       'Jayson Smith',
