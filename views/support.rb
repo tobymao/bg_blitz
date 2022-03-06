@@ -4,7 +4,6 @@ module Views
   class Support < Page
     SUPPORTERS = [
       'Adam Brocker',
-      'Adam Reeve',
       'Adrienne Dong',
       'Andrew Wilson',
       'bac68',
@@ -13,7 +12,6 @@ module Views
       "Ben O'Steen",
       'Board Game Barrage',
       'Brian Ashmore',
-      'Brian Ganninger',
       'Catherine Wiener',
       'Charles Albrecht',
       'Charles Beauvais',
@@ -31,7 +29,6 @@ module Views
       'Evan Schmalz',
       'Flip the Table',
       'Geoff Mathews',
-      'George Campbell',
       'George Stankow',
       'Graham Glaser',
       'Greg Dickson',
@@ -58,7 +55,6 @@ module Views
       'Keith Jones',
       'Kent Parker',
       'Kevin Russ',
-      'kibosh',
       'Lindsay Grossmann',
       'Liz Chapman',
       'Luyi Stork',
