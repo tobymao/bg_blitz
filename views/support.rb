@@ -70,6 +70,7 @@ module Views
       'Pamela Wagner',
       'Patrick Hillier',
       'Rattlebox Games',
+      'Ray Taylor',
       'Richard Fry',
       'Rosco Schock',
       'Sara Tedrick Parikh',
