@@ -67,6 +67,7 @@ module Views
       'Michael McCallen',
       'Miguel Manansala',
       'Nicholas Baker',
+      'Olivia Lothary',
       'Pamela Wagner',
       'Patrick Hillier',
       'Rattlebox Games',
