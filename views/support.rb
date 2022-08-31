@@ -78,6 +78,7 @@ module Views
       "What's Eric Playing",
       'William Carrigan',
       'Winter Blair',
+      'Xoe Allred',
     ].sort.freeze
 
     def render_main
