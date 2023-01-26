@@ -83,7 +83,7 @@ module Views
         h1 'Support Us'
 
         a href: 'https://ko-fi.com/boardgameblitz', target: '_blank' do
-          img src: 'https://storage.ko-fi.com/cdn/brandasset/kofi_s_tag_white.png', style: inline(height: '45px')
+          img src: 'https://storage.ko-fi.com/cdn/brandasset/kofi_s_tag_white.png', style: inline(height: '100px')
         end
 
         div style: inline(margin: '10px') do
