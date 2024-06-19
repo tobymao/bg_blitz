@@ -13,8 +13,8 @@ module Views
         div style: inline(margin: '10px') do
           text 'Check out our '
 
-          a href: 'https://www.redbubble.com/people/boardgameblitz/shop', target: '_blank' do
-            text 'merchandise on Redbubble!'
+          a href: 'https://www.teepublic.com/stores/board-game-blitz?ref_id=36015', target: '_blank' do
+            text 'merchandise on TeePublic!'
           end
         end
       end

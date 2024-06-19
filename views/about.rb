@@ -14,8 +14,8 @@ module Views
       text_style = inline line_height: '1.3em'
 
       div style: text_style do
-        text "Board Game Blitz is a bi-weekly podcast about modern board games and card games hosted by Ambie and Crystal. We also produce videos on the "
-        a "Dice Tower's Youtube channel.", href: 'https://www.youtube.com/user/thedicetower'
+        text "Board Game Blitz is a bi-weekly podcast about modern board games and card games hosted by Ambie and Crystal. "
+        a "Consolidated links.", href: 'https://portaly.cc/BoardGameBlitz'
       end
 
       render_box 'Ambie', BGB_BLUE, ambie_icons, 137, 103
