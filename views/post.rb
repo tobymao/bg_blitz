@@ -123,13 +123,13 @@ module Views
         text 'Share:'
       end
 
-      facebook_url = URI.encode "https://www.facebook.com/sharer.php?u=#{page_url}"
+      facebook_url = "https://www.facebook.com/sharer.php?u=#{CGI.escape page_url}"
       social_button facebook_url, 'Share on Facebook', '/images/facebook.png'
 
-      reddit_url = URI.encode "https://reddit.com/submit?url=#{page_url}&title=#{post.title}"
+      reddit_url = "https://reddit.com/submit?url=#{CGI.escape page_url}&title=#{CGI.escape post.title}"
       social_button reddit_url, 'Share on Reddit', '/images/reddit.png'
 
-      twitter_url = URI.encode "https://twitter.com/intent/tweet?source=#{page_url}&text=#{post.title}: #{page_url}"
+      twitter_url = "https://twitter.com/intent/tweet?source=#{CGI.escape page_url}&text=#{CGI.escape "#{post.title}: #{page_url}"}"
       social_button twitter_url, 'Tweet', '/images/twitter.png'
     end
 
