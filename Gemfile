@@ -10,6 +10,7 @@ gem 'shrine'
 gem 'roda-basic-auth'
 gem 'rake'
 gem 'ruby-mp3info'
+gem 'rss'
 
 group :development, :test do
   # deploy
